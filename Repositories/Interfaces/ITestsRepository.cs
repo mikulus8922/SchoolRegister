@@ -11,6 +11,10 @@ namespace School.Repositories.Interfaces
     {
         DataTable GetClassTests(int classID);
 
+        DataTable GetLessonTests(int lessonID);
+
+        DataTable GetTeacherTests(int teacherID);
+
         bool AddTest(int lessonID, string description);
 
         bool RemoveTest(int testID);

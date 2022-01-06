@@ -30,16 +30,10 @@ namespace School.Forms.DataForms
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.comboBoxClasses = new System.Windows.Forms.ComboBox();
-            this.comboBoxStudents = new System.Windows.Forms.ComboBox();
+            this.comboBoxLessons = new System.Windows.Forms.ComboBox();
             this.buttonModify = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.comboBoxSelectLesson = new System.Windows.Forms.ComboBox();
-            this.textBoxGrade = new System.Windows.Forms.TextBox();
-            this.textBoxWeight = new System.Windows.Forms.TextBox();
-            this.textBoxType = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.comboBoxSelectStudent = new System.Windows.Forms.ComboBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -53,28 +47,19 @@ namespace School.Forms.DataForms
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_CellMouseClick);
             // 
-            // comboBoxClasses
+            // comboBoxLessons
             // 
-            this.comboBoxClasses.FormattingEnabled = true;
-            this.comboBoxClasses.Location = new System.Drawing.Point(43, 24);
-            this.comboBoxClasses.Name = "comboBoxClasses";
-            this.comboBoxClasses.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxClasses.TabIndex = 2;
-            this.comboBoxClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxClasses_SelectedIndexChanged);
-            // 
-            // comboBoxStudents
-            // 
-            this.comboBoxStudents.FormattingEnabled = true;
-            this.comboBoxStudents.Location = new System.Drawing.Point(198, 24);
-            this.comboBoxStudents.Name = "comboBoxStudents";
-            this.comboBoxStudents.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxStudents.TabIndex = 3;
-            this.comboBoxStudents.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudents_SelectedIndexChanged);
+            this.comboBoxLessons.FormattingEnabled = true;
+            this.comboBoxLessons.Location = new System.Drawing.Point(12, 50);
+            this.comboBoxLessons.Name = "comboBoxLessons";
+            this.comboBoxLessons.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLessons.TabIndex = 2;
+            this.comboBoxLessons.SelectedIndexChanged += new System.EventHandler(this.comboBoxLessons_SelectedIndexChanged);
             // 
             // buttonModify
             // 
             this.buttonModify.Enabled = false;
-            this.buttonModify.Location = new System.Drawing.Point(43, 620);
+            this.buttonModify.Location = new System.Drawing.Point(18, 651);
             this.buttonModify.Name = "buttonModify";
             this.buttonModify.Size = new System.Drawing.Size(75, 23);
             this.buttonModify.TabIndex = 4;
@@ -85,7 +70,7 @@ namespace School.Forms.DataForms
             // buttonDelete
             // 
             this.buttonDelete.Enabled = false;
-            this.buttonDelete.Location = new System.Drawing.Point(138, 620);
+            this.buttonDelete.Location = new System.Drawing.Point(18, 680);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 5;
@@ -93,57 +78,17 @@ namespace School.Forms.DataForms
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // comboBoxSelectLesson
-            // 
-            this.comboBoxSelectLesson.FormattingEnabled = true;
-            this.comboBoxSelectLesson.Location = new System.Drawing.Point(291, 622);
-            this.comboBoxSelectLesson.Name = "comboBoxSelectLesson";
-            this.comboBoxSelectLesson.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSelectLesson.TabIndex = 6;
-            // 
-            // textBoxGrade
-            // 
-            this.textBoxGrade.Location = new System.Drawing.Point(484, 568);
-            this.textBoxGrade.Name = "textBoxGrade";
-            this.textBoxGrade.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGrade.TabIndex = 7;
-            this.textBoxGrade.Text = "Grade";
-            // 
-            // textBoxWeight
-            // 
-            this.textBoxWeight.Location = new System.Drawing.Point(484, 620);
-            this.textBoxWeight.Name = "textBoxWeight";
-            this.textBoxWeight.Size = new System.Drawing.Size(100, 20);
-            this.textBoxWeight.TabIndex = 8;
-            this.textBoxWeight.Text = "Weight";
-            // 
-            // textBoxType
-            // 
-            this.textBoxType.Location = new System.Drawing.Point(631, 569);
-            this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(100, 20);
-            this.textBoxType.TabIndex = 9;
-            this.textBoxType.Text = "Type";
-            // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(631, 620);
+            this.textBoxDescription.Location = new System.Drawing.Point(12, 533);
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDescription.Size = new System.Drawing.Size(758, 20);
             this.textBoxDescription.TabIndex = 10;
             this.textBoxDescription.Text = "Description";
             // 
-            // comboBoxSelectStudent
-            // 
-            this.comboBoxSelectStudent.FormattingEnabled = true;
-            this.comboBoxSelectStudent.Location = new System.Drawing.Point(291, 567);
-            this.comboBoxSelectStudent.Name = "comboBoxSelectStudent";
-            this.comboBoxSelectStudent.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSelectStudent.TabIndex = 11;
-            // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(138, 569);
+            this.buttonAdd.Location = new System.Drawing.Point(695, 680);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 12;
@@ -151,28 +96,22 @@ namespace School.Forms.DataForms
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // FormGrades
+            // FormTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(782, 729);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.comboBoxSelectStudent);
             this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.textBoxType);
-            this.Controls.Add(this.textBoxWeight);
-            this.Controls.Add(this.textBoxGrade);
-            this.Controls.Add(this.comboBoxSelectLesson);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonModify);
-            this.Controls.Add(this.comboBoxStudents);
-            this.Controls.Add(this.comboBoxClasses);
+            this.Controls.Add(this.comboBoxLessons);
             this.Controls.Add(this.dataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormGrades";
+            this.Name = "FormTests";
             this.Text = "FormGrades";
-            this.Load += new System.EventHandler(this.FormGrades_Load);
+            this.Load += new System.EventHandler(this.FormTests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,16 +121,10 @@ namespace School.Forms.DataForms
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.ComboBox comboBoxClasses;
-        private System.Windows.Forms.ComboBox comboBoxStudents;
+        private System.Windows.Forms.ComboBox comboBoxLessons;
         private System.Windows.Forms.Button buttonModify;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.ComboBox comboBoxSelectLesson;
-        private System.Windows.Forms.TextBox textBoxGrade;
-        private System.Windows.Forms.TextBox textBoxWeight;
-        private System.Windows.Forms.TextBox textBoxType;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.ComboBox comboBoxSelectStudent;
         private System.Windows.Forms.Button buttonAdd;
     }
 }

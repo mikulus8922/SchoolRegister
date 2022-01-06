@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using School.Data;
+using School.Forms.DataForms.AddForms;
 
 namespace School.Forms.DataForms
 {
@@ -17,91 +19,61 @@ namespace School.Forms.DataForms
         DataTable grades;
         DataTable classes;
         DataTable students;
+        DataTable tests;
         DataTable lessons;
 
         GradesLogic gradesLogic = new GradesLogic();
         ClassesLogic classesLogic = new ClassesLogic();
         StudentsLogic studentsLogic = new StudentsLogic();
+        TestsLogic testsLogic = new TestsLogic();
         LessonsLogic lessonsLogic = new LessonsLogic();
 
-        int selectedIndex;
+        int classID;
 
-        string whatToSelect = "all";
+        int selectedIndex;
 
         public FormTests()
         {
             InitializeComponent();
         }
 
-        private void FormGrades_Load(object sender, EventArgs e)
+        private void FormTests_Load(object sender, EventArgs e)
         {
 
-            classes = classesLogic.ValidateGetClasses();
-            for (int i = 0; i < classes.Rows.Count; i++)
-            {
-                comboBoxClasses.Items.Add(classes.Rows[i].Field<string>("Name"));
-            }
-
-            students = studentsLogic.ValidateGetStudents();
-            for (int i = 0; i < students.Rows.Count; i++)
-            {
-                comboBoxStudents.Items.Add(students.Rows[i].Field<string>("FirstName") + " " + students.Rows[i].Field<string>("LastName"));
-                comboBoxSelectStudent.Items.Add(students.Rows[i].Field<string>("FirstName") + " " + students.Rows[i].Field<string>("LastName"));
-
-            }
-
-            lessons = lessonsLogic.ValidateGetTeacherLessons(Data.UserData.teacherID);
+            lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
             for (int i = 0; i < lessons.Rows.Count; i++)
             {
-                comboBoxSelectLesson.Items.Add(lessons.Rows[i].Field<string>("Name") + " " + lessons.Rows[i].Field<DateTime>("Date"));
+                comboBoxLessons.Items.Add(lessons.Rows[i].Field<string>("Name") + " " + lessons.Rows[i].Field<DateTime>("Date"));
             }
 
+            Console.WriteLine(UserData.teacherID);
 
+            tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
 
-            /*            grades = gradesLogic.ValidateGetGrades();
-                        dataGridView.DataSource = grades;*/
+            dataGridView.DataSource = tests;
         }
 
-        private void comboBoxClasses_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxLessons_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxStudents.Items.Clear();
-            comboBoxSelectStudent.Items.Clear();
 
-            selectedIndex = comboBoxClasses.SelectedIndex;
-            int classID = classes.Rows[selectedIndex].Field<int>("ClassID");
-            students = studentsLogic.ValidateGetStudents(classID);
-            for (int i = 0; i < students.Rows.Count; i++)
-            {
-                comboBoxStudents.Items.Add(students.Rows[i].Field<string>("FirstName") + " " + students.Rows[i].Field<string>("LastName"));
-                comboBoxSelectStudent.Items.Add(students.Rows[i].Field<string>("FirstName") + " " + students.Rows[i].Field<string>("LastName"));
+            selectedIndex = comboBoxLessons.SelectedIndex;
+            int lessonID = lessons.Rows[selectedIndex].Field<int>("LessonID");
 
-            }
+            tests = testsLogic.ValidateGetLessonTests(lessonID);
 
-            grades = gradesLogic.ValidateGetClassGrades(classID);
-            dataGridView.DataSource = grades;
-            whatToSelect = "class";
+            dataGridView.DataSource = tests;
 
         }
 
-        private void comboBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedIndex = comboBoxStudents.SelectedIndex;
-            int studentID = students.Rows[selectedIndex].Field<int>("StudentID");
-
-            grades = gradesLogic.ValidateGetStudentGrades(studentID);
-            dataGridView.DataSource = grades;
-            whatToSelect = "student";
-        }
 
         private void dataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             selectedIndex = dataGridView.CurrentCell.RowIndex;
             DataGridViewRow row = dataGridView.Rows[selectedIndex];
-            textBoxGrade.Text = row.Cells[2].Value.ToString();
+/*            textBoxGrade.Text = row.Cells[2].Value.ToString();
             textBoxWeight.Text = row.Cells[3].Value.ToString();
-            textBoxType.Text = row.Cells[5].Value.ToString();
-            textBoxDescription.Text = row.Cells[7].Value.ToString();
-            comboBoxSelectStudent.SelectedIndex = comboBoxStudents.SelectedIndex;
+            textBoxType.Text = row.Cells[5].Value.ToString();*/
+            textBoxDescription.Text = row.Cells[3].Value.ToString();
 
             Console.WriteLine(selectedIndex);
 
@@ -111,22 +83,21 @@ namespace School.Forms.DataForms
 
         private void buttonModify_Click(object sender, EventArgs e)
         {
-            int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
+            int testID = tests.Rows[selectedIndex].Field<int>("TestID");
 
 
-            int grade = int.Parse(textBoxGrade.Text);
+/*            int grade = int.Parse(textBoxGrade.Text);
             int weight = int.Parse(textBoxWeight.Text);
-            string type = textBoxType.Text;
+            string type = textBoxType.Text;*/
             string description = textBoxDescription.Text;
 
 
-            bool message = gradesLogic.ValidateEditGrade(gradeID, grade, weight, type, description);
+            bool message = testsLogic.ValidateEditTest(testID, description);
 
             Console.WriteLine(message);
 
-            grades = gradesLogic.ValidateGetGrades();
-            dataGridView.DataSource = grades;
-
+            tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
+            dataGridView.DataSource = tests;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;
@@ -134,14 +105,14 @@ namespace School.Forms.DataForms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
+            int testID = tests.Rows[selectedIndex].Field<int>("TestID");
 
-            bool message = gradesLogic.ValidateRemoveGrade(gradeID);
+            bool message = testsLogic.ValidateRemoveTest(testID);
 
             Console.WriteLine(message);
 
-            grades = gradesLogic.ValidateGetGrades();
-            dataGridView.DataSource = grades;
+            tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
+            dataGridView.DataSource = tests;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;
@@ -149,22 +120,8 @@ namespace School.Forms.DataForms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            int studentID = students.Rows[comboBoxSelectStudent.SelectedIndex].Field<int>("StudentID");
-            int lessonID = lessons.Rows[comboBoxSelectLesson.SelectedIndex].Field<int>("LessonID");
-            int grade = int.Parse(textBoxGrade.Text);
-            int weight = int.Parse(textBoxWeight.Text);
-            string type = textBoxType.Text;
-            string description = textBoxDescription.Text;
-
-            Console.WriteLine("Student: " + studentID);
-            Console.WriteLine("Lekcja: " + lessonID);
-            Console.WriteLine("grade: " + grade);
-            Console.WriteLine("weight: " + weight);
-            Console.WriteLine("type: " + type);
-            Console.WriteLine("description: " + description);
-
-
-            gradesLogic.ValidateAddGrade(studentID, lessonID, grade, weight, type, description);
+            FormAddTest formAddTest = new FormAddTest();
+            formAddTest.Show();
         }
     }
 }
