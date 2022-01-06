@@ -152,6 +152,9 @@
     <EmbeddedResource Include="Forms\DataForms\FormGrades.resx">
       <DependentUpon>FormGrades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataForms\FormLessons.resx">
+      <DependentUpon>FormLessons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DataForms\FormTests.resx">
       <DependentUpon>FormTests.cs</DependentUpon>
     </EmbeddedResource>
