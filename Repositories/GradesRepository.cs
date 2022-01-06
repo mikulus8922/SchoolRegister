@@ -92,6 +92,27 @@ namespace School.Repositories
             return table;
         }
 
+        public DataTable GetClassTeacherGrades(int classID, int teacherID)
+        {
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+                            INNER JOIN Students ON Grades.StudentID = Students.ID
+                            INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
+                            INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
+                            WHERE Students.ClassID = {classID}
+                            AND Lessons.TeacherID = {teacherID}; ";
+
+
+            Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            Connection.Close();
+
+            return table;
+        }
+
         public DataTable GetGrades()
         {
             string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
@@ -117,6 +138,45 @@ namespace School.Repositories
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
                             WHERE Students.ID = {studentID}; ";
+
+            Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            Connection.Close();
+
+            return table;
+        }
+
+        public DataTable GetStudentTeacherGrades(int studentID, int teacherID)
+        {
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+                            INNER JOIN Students ON Grades.StudentID = Students.ID
+                            INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
+                            INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
+                            WHERE Students.ID = {studentID}
+                            AND Lessons.TeacherID = {teacherID}; ";
+
+            Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            Connection.Close();
+
+            return table;
+        }
+
+        public DataTable GetTeacherGrades(int teacherID)
+        {
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+                            INNER JOIN Students ON Grades.StudentID = Students.ID
+                            INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
+                            INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
+                            WHERE Lessons.TeacherID = {teacherID}; ";
 
             Connection.Open();
 

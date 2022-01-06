@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DataForms\AddForms\FormAddGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataForms\AddForms\FormAddGrade.Designer.cs">
+      <DependentUpon>FormAddGrade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DataForms\FormAbsences.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="Repositories\TeachersRepository.cs" />
     <Compile Include="Repositories\TestsRepository.cs" />
     <Compile Include="Data\UserData.cs" />
+    <EmbeddedResource Include="Forms\DataForms\AddForms\FormAddGrade.resx">
+      <DependentUpon>FormAddGrade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DataForms\FormGrades.resx">
       <DependentUpon>FormGrades.cs</DependentUpon>
     </EmbeddedResource>

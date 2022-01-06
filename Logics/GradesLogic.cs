@@ -28,6 +28,22 @@ namespace School.Logics
             return gradesRepository.GetClassGrades(classID);
         }
 
+        public DataTable ValidateGetTeacherGrades(int teacherID)
+        {
+            return gradesRepository.GetTeacherGrades(teacherID);
+        }
+
+        public DataTable ValidateGetStudentTeacherGrades(int studentID, int teacherID)
+        {
+            return gradesRepository.GetStudentTeacherGrades(studentID, teacherID);
+        }
+
+
+        public DataTable ValidateGetClassTeacherGrades(int classID, int teacherID)
+        {
+            return gradesRepository.GetClassTeacherGrades(classID, teacherID);
+        }
+
         public bool ValidateAddGrade(int studentID, int lessonID, int grade, int weight, string type)
         {
             if (grade < 1 || grade > 6)
