@@ -10,16 +10,26 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using School.Logics;
 using School.Forms.UserForms;
-using MaterialSkin;
-using MaterialDesignThemes;
-using MaterialDesignColors;
-using MaterialSkin.Controls;
-using MaterialSkin.Properties;
-using MaterialSkin.Animations;
+using System.Runtime.InteropServices;
+
+
 namespace School.Forms
 {
     public partial class FormLogin : Form
     {
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+       
 
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
         TeachersLogic teachersLogic = new TeachersLogic();
@@ -34,6 +44,7 @@ namespace School.Forms
         public FormLogin()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
 
@@ -74,7 +85,7 @@ namespace School.Forms
                         Data.UserData.isTeacher = true;
                         Data.UserData.teacherID = user.Rows[0].Field<int>("ID");
                         this.Hide();
-                        FormTeacher formTeacher = new FormTeacher();
+                        TeacherForm formTeacher = new TeacherForm();
                         formTeacher.FormClosed += (s, args) => this.Close();
                         formTeacher.Show();
                         return;

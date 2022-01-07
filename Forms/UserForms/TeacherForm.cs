@@ -1,4 +1,6 @@
-﻿using School.Logics;
+﻿using School.Data;
+using School.Forms.DataForms;
+using School.Logics;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,19 +10,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using School.Data;
-using School.Forms.DataForms;
+using System.Runtime.InteropServices;
 
 namespace School.Forms.UserForms
 {
-    public partial class FormTeacher : Form
+    public partial class TeacherForm : Form
     {
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
-        public FormTeacher()
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+        public TeacherForm()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void FormTeacher_Load(object sender, EventArgs e)
@@ -35,7 +47,7 @@ namespace School.Forms.UserForms
         private void buttonGrades_Click(object sender, EventArgs e)
         {
             this.panelFormLoader.Controls.Clear();
-            FormGrades formGrades = new FormGrades() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true};
+            FormGrades formGrades = new FormGrades() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             formGrades.FormBorderStyle = FormBorderStyle.None;
             this.panelFormLoader.Controls.Add(formGrades);
             formGrades.Show();
@@ -68,17 +80,20 @@ namespace School.Forms.UserForms
             formTests.Show();
         }
 
+
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-/*            UserData.reset();
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
-            this.Close();*/
+            /*            UserData.reset();
+                        FormLogin formLogin = new FormLogin();
+                        formLogin.Show();
+                        this.Close();*/
         }
 
         private void buttonQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

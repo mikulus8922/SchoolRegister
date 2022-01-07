@@ -75,6 +75,12 @@
     <Compile Include="Forms\DataForms\FormAbsences.Designer.cs">
       <DependentUpon>FormAbsences.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DataForms\GradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataForms\GradeForm.Designer.cs">
+      <DependentUpon>GradeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserForms\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,17 +117,17 @@
     <Compile Include="Forms\UserForms\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserForms\FormTeacher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\UserForms\FormTeacher.Designer.cs">
-      <DependentUpon>FormTeacher.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\DataForms\FormTests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DataForms\FormTests.Designer.cs">
       <DependentUpon>FormTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForms\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForms\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logics\AbsencesLogic.cs" />
     <Compile Include="Logics\ClassesLogic.cs" />
@@ -169,11 +175,14 @@
     <EmbeddedResource Include="Forms\DataForms\FormTests.resx">
       <DependentUpon>FormTests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataForms\GradeForm.resx">
+      <DependentUpon>GradeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserForms\FormTeacher.resx">
-      <DependentUpon>FormTeacher.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserForms\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
