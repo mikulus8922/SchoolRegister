@@ -10,7 +10,12 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using School.Logics;
 using School.Forms.UserForms;
-
+using MaterialSkin;
+using MaterialDesignThemes;
+using MaterialDesignColors;
+using MaterialSkin.Controls;
+using MaterialSkin.Properties;
+using MaterialSkin.Animations;
 namespace School.Forms
 {
     public partial class FormLogin : Form
@@ -31,12 +36,13 @@ namespace School.Forms
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+
+        private void loginButton_Click(object sender, EventArgs e)
         {
 
 
-            string login = textBoxLogin.Text;
-            string password = textBoxPassword.Text;
+            string login = textBox1.Text;
+            string password = textBox2.Text;
             string passowrdHash = GetHash(SHA256.Create(), password);
 
             user = systemUsersLogic.ValidateGetUser(login, passowrdHash);
@@ -116,6 +122,21 @@ namespace School.Forms
 
             // Return the hexadecimal string.
             return sBuilder.ToString();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
