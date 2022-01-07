@@ -15,6 +15,13 @@ namespace School.Repositories.Interfaces
 
         DataTable GetClassGrades(int classID);
 
+        DataTable GetTeacherGrades(int teacherID);
+
+        DataTable GetClassTeacherGrades(int classID, int teacherID);
+
+        DataTable GetStudentTeacherGrades(int studentID, int teacherID);
+
+
         bool AddGrade(int studentID, int lessonID, int grade, int weight, string type);
 
         bool AddGrade(int studentID, int lessonID, int grade, int weight, string type, string description);

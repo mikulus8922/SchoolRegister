@@ -17,6 +17,16 @@ namespace School.Logics
             return testsRepository.GetClassTests(classID);
         }
 
+        public DataTable ValidateGetTeacherTests(int teacherID)
+        {
+            return testsRepository.GetTeacherTests(teacherID);
+        }
+
+        public DataTable ValidateGetLessonTests(int lessonID)
+        {
+            return testsRepository.GetLessonTests(lessonID);
+        }
+
         public bool ValidateAddTest(int lessonID, string description)
         {
             if (description.Length > 255)
