@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,9 +26,22 @@ namespace School.Forms.DataForms.AddForms
         int studentID;
         int classID;
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRectRgn(
+           int nLeftRect,
+           int nTopRect,
+           int nRightRect,
+           int nBottomRect,
+           int nWidthEllipse,
+           int nHeightEllipse
+           );
+
+
         public FormAddGrade()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void FormAddGrade_Load(object sender, EventArgs e)
@@ -61,9 +75,10 @@ namespace School.Forms.DataForms.AddForms
             studentID = students.Rows[comboBoxIndex].Field<int>("StudentID");
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
-            int grade = int.Parse(textBoxGrade.Text);
+
+            int grade = int.Parse(textBoxGrade.Text); 
             int weight = int.Parse(textBoxWeight.Text);
             string type = textBoxType.Text;
             string description = textBoxDescription.Text;
@@ -77,7 +92,7 @@ namespace School.Forms.DataForms.AddForms
             comboBoxStudents.Items.Clear();
         }
 
-        private void buttonQuit_Click(object sender, EventArgs e)
+        private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
