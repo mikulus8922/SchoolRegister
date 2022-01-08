@@ -18,21 +18,10 @@ namespace School.Forms.UserForms
     {
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
-        private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-            );
 
         public FormTeacher()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void FormTeacher_Load(object sender, EventArgs e)
@@ -92,12 +81,14 @@ namespace School.Forms.UserForms
 
         private void QuitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormUserConfirmationDialog dialog = new FormUserConfirmationDialog();
+            dialog.Show();
         }
 
         private void XButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormUserConfirmationDialog dialog = new FormUserConfirmationDialog();
+            dialog.Show();
         }
     }
 }

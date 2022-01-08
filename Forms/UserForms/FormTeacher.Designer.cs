@@ -32,16 +32,16 @@ namespace School.Forms.UserForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTeacher));
             this.labelHello = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelFormLoader = new System.Windows.Forms.Panel();
-            this.XButton = new School.Interface.CustomButton();
             this.QuitButton = new School.Interface.CustomButton();
             this.LogOutButton = new School.Interface.CustomButton();
             this.LessonsButton = new School.Interface.CustomButton();
             this.TestsButton = new School.Interface.CustomButton();
             this.GradesButton = new School.Interface.CustomButton();
             this.AbsencesButton = new School.Interface.CustomButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelFormLoader = new System.Windows.Forms.Panel();
+            this.XButton = new School.Interface.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,15 @@ namespace School.Forms.UserForms
             this.panel1.Size = new System.Drawing.Size(258, 651);
             this.panel1.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(69, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 126);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -87,38 +96,6 @@ namespace School.Forms.UserForms
             this.label1.TabIndex = 13;
             this.label1.Text = "Hello";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelFormLoader
-            // 
-            this.panelFormLoader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelFormLoader.BackColor = System.Drawing.Color.Transparent;
-            this.panelFormLoader.Location = new System.Drawing.Point(354, 39);
-            this.panelFormLoader.Name = "panelFormLoader";
-            this.panelFormLoader.Size = new System.Drawing.Size(970, 660);
-            this.panelFormLoader.TabIndex = 8;
-            // 
-            // XButton
-            // 
-            this.XButton.BackColor = System.Drawing.Color.Transparent;
-            this.XButton.BackgroundColor = System.Drawing.Color.Transparent;
-            this.XButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.XButton.BorderRadius = 0;
-            this.XButton.BorderSize = 0;
-            this.XButton.FlatAppearance.BorderSize = 0;
-            this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.XButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XButton.ForeColor = System.Drawing.Color.White;
-            this.XButton.ForegroundColor = System.Drawing.Color.White;
-            this.XButton.Location = new System.Drawing.Point(1322, 1);
-            this.XButton.Margin = new System.Windows.Forms.Padding(4);
-            this.XButton.Name = "XButton";
-            this.XButton.Size = new System.Drawing.Size(41, 29);
-            this.XButton.TabIndex = 19;
-            this.XButton.Text = "X";
-            this.XButton.UseVisualStyleBackColor = false;
-            this.XButton.Click += new System.EventHandler(this.XButton_Click);
             // 
             // QuitButton
             // 
@@ -240,14 +217,37 @@ namespace School.Forms.UserForms
             this.AbsencesButton.UseVisualStyleBackColor = false;
             this.AbsencesButton.Click += new System.EventHandler(this.AbsencesButton_Click);
             // 
-            // pictureBox1
+            // panelFormLoader
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 126);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.panelFormLoader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelFormLoader.BackColor = System.Drawing.Color.Transparent;
+            this.panelFormLoader.Location = new System.Drawing.Point(354, 39);
+            this.panelFormLoader.Name = "panelFormLoader";
+            this.panelFormLoader.Size = new System.Drawing.Size(970, 660);
+            this.panelFormLoader.TabIndex = 8;
+            // 
+            // XButton
+            // 
+            this.XButton.BackColor = System.Drawing.Color.Transparent;
+            this.XButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.XButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
+            this.XButton.BorderRadius = 0;
+            this.XButton.BorderSize = 0;
+            this.XButton.FlatAppearance.BorderSize = 0;
+            this.XButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.XButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XButton.ForeColor = System.Drawing.Color.White;
+            this.XButton.ForegroundColor = System.Drawing.Color.White;
+            this.XButton.Location = new System.Drawing.Point(1340, 2);
+            this.XButton.Margin = new System.Windows.Forms.Padding(4);
+            this.XButton.Name = "XButton";
+            this.XButton.Size = new System.Drawing.Size(15, 29);
+            this.XButton.TabIndex = 19;
+            this.XButton.Text = "X";
+            this.XButton.UseVisualStyleBackColor = false;
+            this.XButton.Click += new System.EventHandler(this.XButton_Click);
             // 
             // FormTeacher
             // 

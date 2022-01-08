@@ -46,6 +46,8 @@ namespace School.Forms.DataForms.AddForms
 
         private void FormAddGrade_Load(object sender, EventArgs e)
         {
+            comboBoxLessons.Items.Clear();
+            comboBoxStudents.Items.Clear();
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
 
             for (int i = 0; i < lessons.Rows.Count; i++)

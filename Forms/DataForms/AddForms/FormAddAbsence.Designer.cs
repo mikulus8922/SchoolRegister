@@ -50,7 +50,7 @@ namespace School.Forms.DataForms.AddForms
             this.comboBoxLessons.ForeColor = System.Drawing.Color.White;
             this.comboBoxLessons.FormattingEnabled = true;
             this.comboBoxLessons.Location = new System.Drawing.Point(119, 126);
-            this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxLessons.Name = "comboBoxLessons";
             this.comboBoxLessons.Size = new System.Drawing.Size(507, 28);
             this.comboBoxLessons.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace School.Forms.DataForms.AddForms
             this.comboBoxStudents.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudents.FormattingEnabled = true;
             this.comboBoxStudents.Location = new System.Drawing.Point(119, 196);
-            this.comboBoxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStudents.Name = "comboBoxStudents";
             this.comboBoxStudents.Size = new System.Drawing.Size(507, 28);
             this.comboBoxStudents.TabIndex = 1;
@@ -71,11 +71,11 @@ namespace School.Forms.DataForms.AddForms
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.BackColor = System.Drawing.Color.LightCyan;
+            this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.textBoxDescription.Location = new System.Drawing.Point(119, 341);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(508, 69);
@@ -118,7 +118,7 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.ForegroundColor = System.Drawing.Color.White;
             this.AddButton.Location = new System.Drawing.Point(239, 443);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 43);
             this.AddButton.TabIndex = 16;
@@ -139,7 +139,7 @@ namespace School.Forms.DataForms.AddForms
             this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.Location = new System.Drawing.Point(373, 443);
-            this.QuitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuitButton.Margin = new System.Windows.Forms.Padding(4);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(120, 43);
             this.QuitButton.TabIndex = 15;
@@ -153,8 +153,8 @@ namespace School.Forms.DataForms.AddForms
             this.checkBoxIsExcused.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxIsExcused.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIsExcused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.checkBoxIsExcused.Location = new System.Drawing.Point(119, 281);
-            this.checkBoxIsExcused.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxIsExcused.Location = new System.Drawing.Point(119, 260);
+            this.checkBoxIsExcused.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsExcused.Name = "checkBoxIsExcused";
             this.checkBoxIsExcused.Size = new System.Drawing.Size(109, 24);
             this.checkBoxIsExcused.TabIndex = 17;
@@ -169,9 +169,9 @@ namespace School.Forms.DataForms.AddForms
             this.label1.Location = new System.Drawing.Point(302, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 29);
+            this.label1.Size = new System.Drawing.Size(155, 29);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Add grade";
+            this.label1.Text = "Add Absence";
             // 
             // XButton
             // 
@@ -225,9 +225,9 @@ namespace School.Forms.DataForms.AddForms
             this.Controls.Add(this.comboBoxStudents);
             this.Controls.Add(this.comboBoxLessons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddAbsence";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddGrade";
             this.Load += new System.EventHandler(this.FormAddGrade_Load);
             this.ResumeLayout(false);

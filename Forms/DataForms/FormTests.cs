@@ -39,7 +39,7 @@ namespace School.Forms.DataForms
 
         private void FormTests_Load(object sender, EventArgs e)
         {
-
+            comboBoxLessons.Items.Clear();
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
             for (int i = 0; i < lessons.Rows.Count; i++)
             {
@@ -85,18 +85,26 @@ namespace School.Forms.DataForms
 
             Console.WriteLine(selectedIndex);
 
-            buttonModify.Enabled = true;
-            buttonDelete.Enabled = true;
+            ModifyButton.Enabled = true;
+            DeleteButton.Enabled = true;
         }
 
-        private void buttonModify_Click(object sender, EventArgs e)
+
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            FormAddTest formAddTest = new FormAddTest();
+            formAddTest.Show();
+        }
+
+        private void ModifyButton_Click(object sender, EventArgs e)
         {
             int testID = tests.Rows[selectedIndex].Field<int>("TestID");
 
 
-/*            int grade = int.Parse(textBoxGrade.Text);
-            int weight = int.Parse(textBoxWeight.Text);
-            string type = textBoxType.Text;*/
+            /*            int grade = int.Parse(textBoxGrade.Text);
+                        int weight = int.Parse(textBoxWeight.Text);
+                        string type = textBoxType.Text;*/
             string description = textBoxDescription.Text;
 
 
@@ -111,11 +119,11 @@ namespace School.Forms.DataForms
             testsData.Columns.RemoveAt(4);
             dataGridView.DataSource = testsData;
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             int testID = tests.Rows[selectedIndex].Field<int>("TestID");
 
@@ -130,14 +138,13 @@ namespace School.Forms.DataForms
             testsData.Columns.RemoveAt(4);
             dataGridView.DataSource = testsData;
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void ResetButton_Click(object sender, EventArgs e)
         {
-            FormAddTest formAddTest = new FormAddTest();
-            formAddTest.Show();
+            FormTests_Load(sender, e);
         }
     }
 }

@@ -30,6 +30,7 @@ namespace School.Forms.DataForms.AddForms
 
         private void FormAddTest_Load(object sender, EventArgs e)
         {
+            comboBoxLessons.Items.Clear();
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
             for (int i = 0; i < lessons.Rows.Count; i++)
             {
@@ -43,7 +44,13 @@ namespace School.Forms.DataForms.AddForms
             lessonID = lessons.Rows[selectedIndex].Field<int>("LessonID");
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
             string description = textBoxDescription.Text;
 
@@ -52,7 +59,7 @@ namespace School.Forms.DataForms.AddForms
             textBoxDescription.Text = "";
         }
 
-        private void buttonQuit_Click(object sender, EventArgs e)
+        private void XButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

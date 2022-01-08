@@ -55,7 +55,7 @@ namespace School.Forms.DataForms.AddForms
             this.comboBoxLessons.ForeColor = System.Drawing.Color.White;
             this.comboBoxLessons.FormattingEnabled = true;
             this.comboBoxLessons.Location = new System.Drawing.Point(119, 126);
-            this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxLessons.Name = "comboBoxLessons";
             this.comboBoxLessons.Size = new System.Drawing.Size(507, 28);
             this.comboBoxLessons.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace School.Forms.DataForms.AddForms
             this.comboBoxStudents.ForeColor = System.Drawing.Color.White;
             this.comboBoxStudents.FormattingEnabled = true;
             this.comboBoxStudents.Location = new System.Drawing.Point(119, 196);
-            this.comboBoxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStudents.Name = "comboBoxStudents";
             this.comboBoxStudents.Size = new System.Drawing.Size(507, 28);
             this.comboBoxStudents.TabIndex = 1;
@@ -81,7 +81,7 @@ namespace School.Forms.DataForms.AddForms
             this.textBoxGrade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxGrade.Font = new System.Drawing.Font("Roboto", 9F);
             this.textBoxGrade.Location = new System.Drawing.Point(119, 272);
-            this.textBoxGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxGrade.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxGrade.Name = "textBoxGrade";
             this.textBoxGrade.Size = new System.Drawing.Size(133, 19);
             this.textBoxGrade.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace School.Forms.DataForms.AddForms
             this.textBoxType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxType.Font = new System.Drawing.Font("Roboto", 9F);
             this.textBoxType.Location = new System.Drawing.Point(493, 272);
-            this.textBoxType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(133, 19);
             this.textBoxType.TabIndex = 3;
@@ -103,7 +103,7 @@ namespace School.Forms.DataForms.AddForms
             this.textBoxWeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxWeight.Font = new System.Drawing.Font("Roboto", 9F);
             this.textBoxWeight.Location = new System.Drawing.Point(307, 272);
-            this.textBoxWeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxWeight.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxWeight.Name = "textBoxWeight";
             this.textBoxWeight.Size = new System.Drawing.Size(133, 19);
             this.textBoxWeight.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace School.Forms.DataForms.AddForms
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDescription.Font = new System.Drawing.Font("Roboto", 9F);
             this.textBoxDescription.Location = new System.Drawing.Point(119, 341);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(508, 69);
@@ -223,7 +223,7 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.ForegroundColor = System.Drawing.Color.White;
             this.AddButton.Location = new System.Drawing.Point(239, 443);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 43);
             this.AddButton.TabIndex = 16;
@@ -244,7 +244,7 @@ namespace School.Forms.DataForms.AddForms
             this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.Location = new System.Drawing.Point(373, 443);
-            this.QuitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuitButton.Margin = new System.Windows.Forms.Padding(4);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(120, 43);
             this.QuitButton.TabIndex = 15;
@@ -295,8 +295,9 @@ namespace School.Forms.DataForms.AddForms
             this.Controls.Add(this.comboBoxStudents);
             this.Controls.Add(this.comboBoxLessons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddGrade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddGrade";
             this.Load += new System.EventHandler(this.FormAddGrade_Load);
             this.ResumeLayout(false);

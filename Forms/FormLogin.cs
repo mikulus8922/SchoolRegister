@@ -17,20 +17,6 @@ namespace School.Forms
 {
     public partial class FormLogin : Form
     {
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
-        private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-            );
-
-       
-
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
         TeachersLogic teachersLogic = new TeachersLogic();
         StudentsLogic studentsLogic = new StudentsLogic();
@@ -44,7 +30,6 @@ namespace School.Forms
         public FormLogin()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
 

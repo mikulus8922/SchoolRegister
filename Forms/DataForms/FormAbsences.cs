@@ -38,6 +38,8 @@ namespace School.Forms.DataForms
 
         private void FormAbsences_Load(object sender, EventArgs e)
         {
+            comboBoxClasses.Items.Clear();
+
             classes = classesLogic.ValidateGetClasses();
 
             for (int i = 0; i < classes.Rows.Count; i++)
@@ -86,7 +88,7 @@ namespace School.Forms.DataForms
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            FormAddGrade formAddAbsence = new FormAddGrade();
+            FormAddAbsence formAddAbsence = new FormAddAbsence();
             formAddAbsence.Show();
         }
 
