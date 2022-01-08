@@ -35,5 +35,10 @@ namespace School.Forms.DataForms
             lessonsData.Columns.RemoveAt(6);
             dataGridView.DataSource = lessonsData;
         }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
