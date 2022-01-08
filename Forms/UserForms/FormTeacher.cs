@@ -42,7 +42,7 @@ namespace School.Forms.UserForms
             string name = users.Rows[0].Field<string>("FirstName");
 
 
-            labelHello.Text = $"Hello {name}";
+            labelHello.Text = $"{name} !";
         }
 
         private void AbsencesButton_Click(object sender, EventArgs e)
@@ -95,6 +95,9 @@ namespace School.Forms.UserForms
             this.Close();
         }
 
-
+        private void XButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

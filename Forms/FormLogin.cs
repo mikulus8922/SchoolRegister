@@ -148,5 +148,10 @@ namespace School.Forms
                 }
             }
         }
+
+        private void XButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

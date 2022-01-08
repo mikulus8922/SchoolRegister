@@ -48,6 +48,7 @@ namespace School.Forms.DataForms
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
+
             dataGridView.DataSource = gradesData;
         }
 
@@ -93,7 +94,6 @@ namespace School.Forms.DataForms
         {
             int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
 
-
             int grade = int.Parse(textBoxGrade.Text);
             int weight = int.Parse(textBoxWeight.Text);
             string type = textBoxType.Text;
@@ -136,5 +136,31 @@ namespace School.Forms.DataForms
             DeleteButton.Enabled = false;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            FormGrades_Load(sender, e);
+        }
+
+        
     }
 }
