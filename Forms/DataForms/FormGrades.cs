@@ -44,7 +44,11 @@ namespace School.Forms.DataForms
             }
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
+            DataTable gradesData = grades;
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            dataGridView.DataSource = gradesData;
         }
 
         private void comboBoxClasses_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,7 +59,11 @@ namespace School.Forms.DataForms
             students = studentsLogic.ValidateGetStudents(classID);
 
             grades = gradesLogic.ValidateGetClassTeacherGrades(classID, UserData.teacherID);
-            dataGridView.DataSource = grades;
+            DataTable gradesData = grades;
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            dataGridView.DataSource = gradesData;
 
         }
 
@@ -71,15 +79,21 @@ namespace School.Forms.DataForms
 
             Console.WriteLine(selectedIndex);
 
-            buttonModify.Enabled = true;
-            buttonDelete.Enabled = true;
+            ModifyButton.Enabled = true;
+            DeleteButton.Enabled = true;
         }
 
-        private void buttonModify_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            FormAddGrade formAddGrade = new FormAddGrade();
+            formAddGrade.Show();
+        }
+
+        private void ModifyButton_Click(object sender, EventArgs e)
         {
             int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
 
-            
+
             int grade = int.Parse(textBoxGrade.Text);
             int weight = int.Parse(textBoxWeight.Text);
             string type = textBoxType.Text;
@@ -91,14 +105,19 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
+            DataTable gradesData = grades;
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            dataGridView.DataSource = gradesData;
 
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
+
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
 
@@ -107,17 +126,15 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
+            DataTable gradesData = grades;
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            gradesData.Columns.RemoveAt(8);
+            dataGridView.DataSource = gradesData;
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            FormAddGrade formAddGrade = new FormAddGrade();
-            formAddGrade.Show();
-
-        }
     }
 }

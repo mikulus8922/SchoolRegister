@@ -29,7 +29,11 @@ namespace School.Forms.DataForms
             Console.WriteLine(UserData.teacherID);
 
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
-            dataGridView.DataSource = lessons;
+            DataTable lessonsData = lessons;
+            lessonsData.Columns.RemoveAt(6);
+            lessonsData.Columns.RemoveAt(6);
+            lessonsData.Columns.RemoveAt(6);
+            dataGridView.DataSource = lessonsData;
         }
     }
 }

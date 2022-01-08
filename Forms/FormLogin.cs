@@ -116,10 +116,11 @@ namespace School.Forms
 
                     if (teacher.Rows.Count == 1)
                     {
+                        //Console.WriteLine(teacher.Rows[0].Field<int>("ID"));
                         Data.UserData.isTeacher = true;
-                        Data.UserData.teacherID = user.Rows[0].Field<int>("ID");
+                        Data.UserData.teacherID = teacher.Rows[0].Field<int>("ID");
                         this.Hide();
-                        TeacherForm formTeacher = new TeacherForm();
+                        FormTeacher formTeacher = new FormTeacher();
                         formTeacher.FormClosed += (s, args) => this.Close();
                         formTeacher.Show();
                         return;
@@ -127,7 +128,7 @@ namespace School.Forms
                     if (student.Rows.Count == 1)
                     {
                         Data.UserData.isStudent = true;
-                        Data.UserData.studentID = user.Rows[0].Field<int>("ID");
+                        Data.UserData.studentID = student.Rows[0].Field<int>("ID");
                         this.Hide();
                         FormStudent formStudent = new FormStudent();
                         formStudent.FormClosed += (s, args) => this.Close();
@@ -137,7 +138,7 @@ namespace School.Forms
                     if (parent.Rows.Count == 1)
                     {
                         Data.UserData.isParent = true;
-                        Data.UserData.parentID = user.Rows[0].Field<int>("ID");
+                        Data.UserData.parentID = parent.Rows[0].Field<int>("ID");
                         this.Hide();
                         FormParent formParent = new FormParent();
                         formParent.FormClosed += (s, args) => this.Close();

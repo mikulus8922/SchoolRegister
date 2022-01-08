@@ -50,7 +50,11 @@ namespace School.Forms.DataForms
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
 
-            dataGridView.DataSource = tests;
+            DataTable testsData = tests;
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            dataGridView.DataSource = testsData;
         }
 
         private void comboBoxLessons_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +65,11 @@ namespace School.Forms.DataForms
 
             tests = testsLogic.ValidateGetLessonTests(lessonID);
 
-            dataGridView.DataSource = tests;
+            DataTable testsData = tests;
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            dataGridView.DataSource = testsData;
 
         }
 
@@ -97,7 +105,11 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
-            dataGridView.DataSource = tests;
+            DataTable testsData = tests;
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            dataGridView.DataSource = testsData;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;
@@ -112,7 +124,11 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
-            dataGridView.DataSource = tests;
+            DataTable testsData = tests;
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            testsData.Columns.RemoveAt(4);
+            dataGridView.DataSource = testsData;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;

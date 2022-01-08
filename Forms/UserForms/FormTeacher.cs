@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 
 namespace School.Forms.UserForms
 {
-    public partial class TeacherForm : Form
+    public partial class FormTeacher : Form
     {
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
 
@@ -29,7 +29,7 @@ namespace School.Forms.UserForms
             int nHeightEllipse
             );
 
-        public TeacherForm()
+        public FormTeacher()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -38,6 +38,7 @@ namespace School.Forms.UserForms
         private void FormTeacher_Load(object sender, EventArgs e)
         {
             DataTable users = systemUsersLogic.ValidateGetUser(UserData.userID);
+            Console.WriteLine(users.Rows[0].Field<string>("FirstName"));
             string name = users.Rows[0].Field<string>("FirstName");
 
 
@@ -53,10 +54,10 @@ namespace School.Forms.UserForms
             formAbsences.Show();
         }
 
-        private void GradesButton_Click_1(object sender, EventArgs e)
+        private void GradesButton_Click(object sender, EventArgs e)
         {
             this.panelFormLoader.Controls.Clear();
-            GradeForm formGrades = new GradeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormGrades formGrades = new FormGrades() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             formGrades.FormBorderStyle = FormBorderStyle.None;
             this.panelFormLoader.Controls.Add(formGrades);
             formGrades.Show();
@@ -93,5 +94,7 @@ namespace School.Forms.UserForms
         {
             this.Close();
         }
+
+
     }
 }

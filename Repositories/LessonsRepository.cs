@@ -96,7 +96,7 @@ namespace School.Repositories
 
         public DataTable GetTeacherLessons(int teacherID)
         {
-            string query = $@"SELECT Lessons.Name, Lessons.Date, Lessons.Description, Classes.Name, SystemUsers.FirstName, SystemUsers.LastName, Lessons.ClassID as ClassID, Lessons.TeacherID as TeacherID, Lessons.ID as LessonID  FROM Lessons
+            string query = $@"SELECT Lessons.Name, Lessons.Date, Lessons.Description, Classes.Name, SystemUsers.FirstName, SystemUsers.LastName, Lessons.ClassID as ClassID, Lessons.TeacherID as TeacherID, Lessons.ID as LessonID FROM Lessons
                             INNER JOIN Teachers ON Teachers.ID = Lessons.TeacherID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Teachers.SystemUserID
                             INNER JOIN Classes ON Lessons.ClassID = Classes.ID
