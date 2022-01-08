@@ -129,6 +129,9 @@
     <Compile Include="Forms\UserForms\TeacherForm.Designer.cs">
       <DependentUpon>TeacherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Logics\AbsencesLogic.cs" />
     <Compile Include="Logics\ClassesLogic.cs" />
     <Compile Include="Logics\GradesLogic.cs" />

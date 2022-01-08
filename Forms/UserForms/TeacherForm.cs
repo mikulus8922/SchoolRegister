@@ -44,16 +44,7 @@ namespace School.Forms.UserForms
             labelHello.Text = $"Hello {name}";
         }
 
-        private void buttonGrades_Click(object sender, EventArgs e)
-        {
-            this.panelFormLoader.Controls.Clear();
-            FormGrades formGrades = new FormGrades() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formGrades.FormBorderStyle = FormBorderStyle.None;
-            this.panelFormLoader.Controls.Add(formGrades);
-            formGrades.Show();
-        }
-
-        private void buttonAbsences_Click(object sender, EventArgs e)
+        private void AbsencesButton_Click(object sender, EventArgs e)
         {
             this.panelFormLoader.Controls.Clear();
             FormAbsences formAbsences = new FormAbsences() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -62,16 +53,16 @@ namespace School.Forms.UserForms
             formAbsences.Show();
         }
 
-        private void buttonLessons_Click(object sender, EventArgs e)
+        private void GradesButton_Click_1(object sender, EventArgs e)
         {
             this.panelFormLoader.Controls.Clear();
-            FormLessons formLessons = new FormLessons() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formLessons.FormBorderStyle = FormBorderStyle.None;
-            this.panelFormLoader.Controls.Add(formLessons);
-            formLessons.Show();
+            GradeForm formGrades = new GradeForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formGrades.FormBorderStyle = FormBorderStyle.None;
+            this.panelFormLoader.Controls.Add(formGrades);
+            formGrades.Show();
         }
 
-        private void buttonTests_Click(object sender, EventArgs e)
+        private void TestsButton_Click(object sender, EventArgs e)
         {
             this.panelFormLoader.Controls.Clear();
             FormTests formTests = new FormTests() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -80,20 +71,27 @@ namespace School.Forms.UserForms
             formTests.Show();
         }
 
-
-        private void buttonLogout_Click(object sender, EventArgs e)
+        private void LessonsButton_Click(object sender, EventArgs e)
         {
-            /*            UserData.reset();
-                        FormLogin formLogin = new FormLogin();
-                        formLogin.Show();
-                        this.Close();*/
+            this.panelFormLoader.Controls.Clear();
+            FormLessons formLessons = new FormLessons() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formLessons.FormBorderStyle = FormBorderStyle.None;
+            this.panelFormLoader.Controls.Add(formLessons);
+            formLessons.Show();
         }
 
-        private void buttonQuit_Click(object sender, EventArgs e)
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            /*            UserData.reset();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();*/
+
+        }
+
+        private void QuitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
     }
 }

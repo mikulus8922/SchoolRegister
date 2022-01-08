@@ -48,17 +48,51 @@ namespace School.Forms
         }
 
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
 
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
 
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            var sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInButton_Click_1(object sender, EventArgs e)
+        {
             string login = textBox1.Text;
             string password = textBox2.Text;
             string passowrdHash = GetHash(SHA256.Create(), password);
 
             user = systemUsersLogic.ValidateGetUser(login, passowrdHash);
 
-            if(user.Rows.Count == 0)
+            if (user.Rows.Count == 0)
             {
                 //wypisz blad
             }
@@ -111,43 +145,7 @@ namespace School.Forms
                         return;
                     }
                 }
-            }        
-        }
-
-        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
-        {
-
-            // Convert the input string to a byte array and compute the hash.
-            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-            // Create a new Stringbuilder to collect the bytes
-            // and create a string.
-            var sBuilder = new StringBuilder();
-
-            // Loop through each byte of the hashed data
-            // and format each one as a hexadecimal string.
-            for (int i = 0; i < data.Length; i++)
-            {
-                sBuilder.Append(data[i].ToString("x2"));
             }
-
-            // Return the hexadecimal string.
-            return sBuilder.ToString();
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
