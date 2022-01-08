@@ -27,6 +27,11 @@ namespace School.Logics
             return absencesRepository.GetTeacherAbsences(teacherID);
         }
 
+        public DataTable ValidateGetTeacherClassAbsences(int teacherID, int classID)
+        {
+            return absencesRepository.GetTeacherClassAbsences(teacherID, classID);
+        }
+
         public bool ValidateAddAbsence(int studentID, int lessonID, bool isExcused)
         {
             return absencesRepository.AddAbsence(studentID, lessonID, isExcused);

@@ -15,6 +15,8 @@ namespace School.Repositories.Interfaces
 
         DataTable GetTeacherAbsences(int teacherID);
 
+        DataTable GetTeacherClassAbsences(int teacherID, int classID);
+
         bool AddAbsence(int studentID, int lessonID, bool isExcused);
 
         bool AddAbsence(int studentID, int lessonID, bool isExcused, string description);

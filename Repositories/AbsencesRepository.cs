@@ -116,6 +116,27 @@ namespace School.Repositories
             return table;
         }
 
+        public DataTable GetTeacherClassAbsences(int teacherID, int classID)
+        {
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name, Lessons.Name, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
+							INNER JOIN Students ON Students.ID = Absences.StudentID
+                            INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
+                            INNER JOIN Classes ON Classes.ID = Students.ClassID
+							INNER JOIN Lessons ON Lessons.ID = Absences.LessonID
+							WHERE Lessons.TeacherID = {teacherID}
+                            AND Classes.ID = {classID}; ";
+
+            Connection.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            Connection.Close();
+
+            return table;
+        }
+
         public bool RemoveAbsence(int absenceID)
         {
             string query = $@"DELETE FROM Absences WHERE ID ='{absenceID}'; ";

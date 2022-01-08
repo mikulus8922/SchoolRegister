@@ -20,11 +20,13 @@ namespace School.Forms.DataForms
         DataTable classes;
         DataTable students;
         DataTable lessons;
+        DataTable absences;
 
         GradesLogic gradesLogic = new GradesLogic();
         ClassesLogic classesLogic = new ClassesLogic();
         StudentsLogic studentsLogic = new StudentsLogic();
         LessonsLogic lessonsLogic = new LessonsLogic();
+        AbsencesLogic absencesLogic = new AbsencesLogic();
 
 
         int selectedIndex;
@@ -34,28 +36,38 @@ namespace School.Forms.DataForms
             InitializeComponent();
         }
 
-        private void FormGrades_Load(object sender, EventArgs e)
+        private void FormAbsences_Load(object sender, EventArgs e)
         {
-            lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
+            classes = classesLogic.ValidateGetClasses();
 
             for (int i = 0; i < classes.Rows.Count; i++)
             {
-                comboBoxStudents.Items.Add(classes.Rows[i].Field<string>("Name"));
+                comboBoxClasses.Items.Add(classes.Rows[i].Field<string>("Name"));
             }
 
-            grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
+
+            absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
+
+            DataTable absencesData = absences;
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            dataGridView.DataSource = absencesData;
         }
 
-        private void comboBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxClasses_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            selectedIndex = comboBoxStudents.SelectedIndex;
+            selectedIndex = comboBoxClasses.SelectedIndex;
             int classID = classes.Rows[selectedIndex].Field<int>("ClassID");
-            students = studentsLogic.ValidateGetStudents(classID);
 
-            grades = gradesLogic.ValidateGetClassTeacherGrades(classID, UserData.teacherID);
-            dataGridView.DataSource = grades;
+            absences = absencesLogic.ValidateGetTeacherClassAbsences(UserData.teacherID, classID);
+
+            DataTable absencesData = absences;
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            dataGridView.DataSource = absencesData;
 
         }
 
@@ -64,12 +76,8 @@ namespace School.Forms.DataForms
         {
             selectedIndex = dataGridView.CurrentCell.RowIndex;
             DataGridViewRow row = dataGridView.Rows[selectedIndex];
-            textBoxGrade.Text = row.Cells[2].Value.ToString();
-            textBoxWeight.Text = row.Cells[3].Value.ToString();
-            textBoxType.Text = row.Cells[5].Value.ToString();
+            checkBoxIsExcused.Checked = bool.Parse(row.Cells[5].Value.ToString());
             textBoxDescription.Text = row.Cells[7].Value.ToString();
-
-            Console.WriteLine(selectedIndex);
 
             buttonModify.Enabled = true;
             buttonDelete.Enabled = true;
@@ -77,22 +85,22 @@ namespace School.Forms.DataForms
 
         private void buttonModify_Click(object sender, EventArgs e)
         {
-            int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
+            int absenceID = absences.Rows[selectedIndex].Field<int>("AbsenceID");
 
-
-            int grade = int.Parse(textBoxGrade.Text);
-            int weight = int.Parse(textBoxWeight.Text);
-            string type = textBoxType.Text;
+            bool isExcused = checkBoxIsExcused.Checked;
             string description = textBoxDescription.Text;
 
 
-            bool message = gradesLogic.ValidateEditGrade(gradeID, grade, weight, type, description);
+            bool message = absencesLogic.ValidateEditAbsence(absenceID, isExcused, description);
 
             Console.WriteLine(message);
 
-            grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
-
+            absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
+            DataTable absencesData = absences;
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            dataGridView.DataSource = absencesData;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;
@@ -100,14 +108,18 @@ namespace School.Forms.DataForms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
+            int absenceID = absences.Rows[selectedIndex].Field<int>("AbsenceID");
 
-            bool message = gradesLogic.ValidateRemoveGrade(gradeID);
+            bool message = absencesLogic.ValidateRemoveAbsence(absenceID);
 
             Console.WriteLine(message);
 
-            grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            dataGridView.DataSource = grades;
+            absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
+            DataTable absencesData = absences;
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            absencesData.Columns.RemoveAt(7);
+            dataGridView.DataSource = absencesData;
 
             buttonModify.Enabled = false;
             buttonDelete.Enabled = false;
@@ -115,9 +127,8 @@ namespace School.Forms.DataForms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            FormAddGrade formAddGrade = new FormAddGrade();
-            formAddGrade.Show();
-
+            FormAddGrade formAddAbsence = new FormAddGrade();
+            formAddAbsence.Show();
         }
     }
 }
