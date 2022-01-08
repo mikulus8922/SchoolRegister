@@ -160,7 +160,5 @@ namespace School.Forms.DataForms
         {
             FormGrades_Load(sender, e);
         }
-
-        
     }
 }

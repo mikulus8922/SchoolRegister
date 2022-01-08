@@ -58,10 +58,10 @@ namespace School.Forms.DataForms
             this.comboBoxClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClasses.ForeColor = System.Drawing.Color.White;
             this.comboBoxClasses.FormattingEnabled = true;
-            this.comboBoxClasses.ItemHeight = 16;
+            this.comboBoxClasses.ItemHeight = 20;
             this.comboBoxClasses.Location = new System.Drawing.Point(21, 93);
             this.comboBoxClasses.Name = "comboBoxClasses";
-            this.comboBoxClasses.Size = new System.Drawing.Size(295, 24);
+            this.comboBoxClasses.Size = new System.Drawing.Size(295, 28);
             this.comboBoxClasses.TabIndex = 12;
             this.comboBoxClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxClasses_SelectedIndexChanged);
             // 
@@ -93,6 +93,7 @@ namespace School.Forms.DataForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView.EnableHeadersVisualStyles = false;
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.dataGridView.Location = new System.Drawing.Point(22, 125);
             this.dataGridView.Name = "dataGridView";
@@ -169,7 +170,7 @@ namespace School.Forms.DataForms
             this.label1.Location = new System.Drawing.Point(18, 536);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "Grade";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -182,7 +183,7 @@ namespace School.Forms.DataForms
             this.label2.Location = new System.Drawing.Point(118, 535);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 25;
             this.label2.Text = "Weight";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -195,7 +196,7 @@ namespace School.Forms.DataForms
             this.label3.Location = new System.Drawing.Point(221, 535);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 26;
             this.label3.Text = "Type";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -208,7 +209,7 @@ namespace School.Forms.DataForms
             this.label4.Location = new System.Drawing.Point(329, 535);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Description";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -221,7 +222,7 @@ namespace School.Forms.DataForms
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.label5.Location = new System.Drawing.Point(18, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 26);
+            this.label5.Size = new System.Drawing.Size(109, 31);
             this.label5.TabIndex = 31;
             this.label5.Text = "Grades";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,7 +235,7 @@ namespace School.Forms.DataForms
             this.label6.Location = new System.Drawing.Point(20, 71);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 17);
+            this.label6.Size = new System.Drawing.Size(114, 20);
             this.label6.TabIndex = 32;
             this.label6.Text = "Choose Class";
             // 
