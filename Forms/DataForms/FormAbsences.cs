@@ -48,7 +48,7 @@ namespace School.Forms.DataForms
 
             absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
 
-            DataTable absencesData = absences;
+            DataTable absencesData = absences.Copy();
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
@@ -63,7 +63,7 @@ namespace School.Forms.DataForms
 
             absences = absencesLogic.ValidateGetTeacherClassAbsences(UserData.teacherID, classID);
 
-            DataTable absencesData = absences;
+            DataTable absencesData = absences.Copy();
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
@@ -79,11 +79,18 @@ namespace School.Forms.DataForms
             checkBoxIsExcused.Checked = bool.Parse(row.Cells[5].Value.ToString());
             textBoxDescription.Text = row.Cells[7].Value.ToString();
 
-            buttonModify.Enabled = true;
-            buttonDelete.Enabled = true;
+            ModifyButton.Enabled = true;
+            DeleteButton.Enabled = true;
         }
 
-        private void buttonModify_Click(object sender, EventArgs e)
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            FormAddGrade formAddAbsence = new FormAddGrade();
+            formAddAbsence.Show();
+        }
+
+        private void ModifyButton_Click(object sender, EventArgs e)
         {
             int absenceID = absences.Rows[selectedIndex].Field<int>("AbsenceID");
 
@@ -96,17 +103,17 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
-            DataTable absencesData = absences;
+            DataTable absencesData = absences.Copy();
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             dataGridView.DataSource = absencesData;
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             int absenceID = absences.Rows[selectedIndex].Field<int>("AbsenceID");
 
@@ -115,20 +122,19 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
-            DataTable absencesData = absences;
+            DataTable absencesData = absences.Copy();
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             absencesData.Columns.RemoveAt(7);
             dataGridView.DataSource = absencesData;
 
-            buttonModify.Enabled = false;
-            buttonDelete.Enabled = false;
+            ModifyButton.Enabled = false;
+            DeleteButton.Enabled = false;
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void ResetButton_Click(object sender, EventArgs e)
         {
-            FormAddGrade formAddAbsence = new FormAddGrade();
-            formAddAbsence.Show();
+            FormAbsences_Load(sender, e);
         }
     }
 }

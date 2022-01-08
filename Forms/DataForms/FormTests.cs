@@ -50,7 +50,7 @@ namespace School.Forms.DataForms
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
 
-            DataTable testsData = tests;
+            DataTable testsData = tests.Copy();
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
@@ -65,7 +65,7 @@ namespace School.Forms.DataForms
 
             tests = testsLogic.ValidateGetLessonTests(lessonID);
 
-            DataTable testsData = tests;
+            DataTable testsData = tests.Copy();
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
@@ -105,7 +105,7 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
-            DataTable testsData = tests;
+            DataTable testsData = tests.Copy();
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
@@ -124,7 +124,7 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
-            DataTable testsData = tests;
+            DataTable testsData = tests.Copy();
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);
             testsData.Columns.RemoveAt(4);

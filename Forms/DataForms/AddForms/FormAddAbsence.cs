@@ -91,5 +91,10 @@ namespace School.Forms.DataForms.AddForms
         {
             this.Close();
         }
+
+        private void XButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

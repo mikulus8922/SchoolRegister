@@ -29,7 +29,7 @@ namespace School.Forms.DataForms
             Console.WriteLine(UserData.teacherID);
 
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
-            DataTable lessonsData = lessons;
+            DataTable lessonsData = lessons.Copy();
             lessonsData.Columns.RemoveAt(6);
             lessonsData.Columns.RemoveAt(6);
             lessonsData.Columns.RemoveAt(6);

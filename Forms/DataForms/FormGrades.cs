@@ -44,7 +44,7 @@ namespace School.Forms.DataForms
             }
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            DataTable gradesData = grades;
+            DataTable gradesData = grades.Copy();
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
@@ -60,7 +60,7 @@ namespace School.Forms.DataForms
             students = studentsLogic.ValidateGetStudents(classID);
 
             grades = gradesLogic.ValidateGetClassTeacherGrades(classID, UserData.teacherID);
-            DataTable gradesData = grades;
+            DataTable gradesData = grades.Copy();
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
@@ -105,7 +105,7 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            DataTable gradesData = grades;
+            DataTable gradesData = grades.Copy();
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
@@ -126,7 +126,7 @@ namespace School.Forms.DataForms
             Console.WriteLine(message);
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
-            DataTable gradesData = grades;
+            DataTable gradesData = grades.Copy();
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
             gradesData.Columns.RemoveAt(8);
