@@ -36,7 +36,7 @@ namespace School.Forms.DataForms
 
         private void FormGrades_Load(object sender, EventArgs e)
         {
-
+            comboBoxClasses.Items.Clear();
             classes = classesLogic.ValidateGetClasses();
             for (int i = 0; i < classes.Rows.Count; i++)
             {
