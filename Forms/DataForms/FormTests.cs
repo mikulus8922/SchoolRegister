@@ -16,19 +16,18 @@ namespace School.Forms.DataForms
     public partial class FormTests : Form
     {
 
-        DataTable grades;
+/*        DataTable grades;
         DataTable classes;
-        DataTable students;
+        DataTable students;*/
         DataTable tests;
         DataTable lessons;
 
-        GradesLogic gradesLogic = new GradesLogic();
+/*        GradesLogic gradesLogic = new GradesLogic();
         ClassesLogic classesLogic = new ClassesLogic();
-        StudentsLogic studentsLogic = new StudentsLogic();
+        StudentsLogic studentsLogic = new StudentsLogic();*/
         TestsLogic testsLogic = new TestsLogic();
         LessonsLogic lessonsLogic = new LessonsLogic();
 
-        int classID;
 
         int selectedIndex;
 

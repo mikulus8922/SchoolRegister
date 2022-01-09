@@ -16,16 +16,16 @@ namespace School.Forms.DataForms
     public partial class FormAbsences : Form
     {
 
-        DataTable grades;
+        //DataTable grades;
         DataTable classes;
-        DataTable students;
-        DataTable lessons;
+        //DataTable students;
+        //DataTable lessons;
         DataTable absences;
 
         GradesLogic gradesLogic = new GradesLogic();
         ClassesLogic classesLogic = new ClassesLogic();
-        StudentsLogic studentsLogic = new StudentsLogic();
-        LessonsLogic lessonsLogic = new LessonsLogic();
+        //StudentsLogic studentsLogic = new StudentsLogic();
+        //LessonsLogic lessonsLogic = new LessonsLogic();
         AbsencesLogic absencesLogic = new AbsencesLogic();
 
 
