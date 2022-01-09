@@ -46,13 +46,13 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.comboBoxLessons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.comboBoxLessons.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBoxLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBoxLessons.Font = new System.Drawing.Font("Roboto", 10F);
             this.comboBoxLessons.ForeColor = System.Drawing.Color.White;
             this.comboBoxLessons.FormattingEnabled = true;
             this.comboBoxLessons.Location = new System.Drawing.Point(119, 126);
             this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxLessons.Name = "comboBoxLessons";
-            this.comboBoxLessons.Size = new System.Drawing.Size(507, 24);
+            this.comboBoxLessons.Size = new System.Drawing.Size(507, 28);
             this.comboBoxLessons.TabIndex = 0;
             this.comboBoxLessons.SelectedIndexChanged += new System.EventHandler(this.comboBoxLessons_SelectedIndexChanged);
             // 
@@ -60,13 +60,13 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.comboBoxStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.comboBoxStudents.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBoxStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStudents.Font = new System.Drawing.Font("Roboto", 10F);
             this.comboBoxStudents.ForeColor = System.Drawing.Color.White;
             this.comboBoxStudents.FormattingEnabled = true;
             this.comboBoxStudents.Location = new System.Drawing.Point(119, 196);
             this.comboBoxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStudents.Name = "comboBoxStudents";
-            this.comboBoxStudents.Size = new System.Drawing.Size(507, 24);
+            this.comboBoxStudents.Size = new System.Drawing.Size(507, 28);
             this.comboBoxStudents.TabIndex = 1;
             this.comboBoxStudents.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudents_SelectedIndexChanged);
             // 
@@ -74,7 +74,7 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBoxDescription.Font = new System.Drawing.Font("Roboto", 10F);
             this.textBoxDescription.Location = new System.Drawing.Point(119, 341);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDescription.Multiline = true;
@@ -85,24 +85,24 @@ namespace School.Forms.DataForms.AddForms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Font = new System.Drawing.Font("Roboto", 10F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(43)))));
             this.label2.Location = new System.Drawing.Point(120, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 17);
+            this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Choose Lesson";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Font = new System.Drawing.Font("Roboto", 10F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(43)))));
             this.label3.Location = new System.Drawing.Point(120, 171);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(133, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Choose Student";
             // 
@@ -115,7 +115,7 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.BorderSize = 0;
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.ForegroundColor = System.Drawing.Color.White;
             this.AddButton.Location = new System.Drawing.Point(231, 443);
@@ -136,7 +136,7 @@ namespace School.Forms.DataForms.AddForms
             this.QuitButton.BorderSize = 0;
             this.QuitButton.FlatAppearance.BorderSize = 0;
             this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.Location = new System.Drawing.Point(373, 443);
@@ -152,12 +152,12 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.checkBoxIsExcused.AutoSize = true;
             this.checkBoxIsExcused.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxIsExcused.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsExcused.Font = new System.Drawing.Font("Roboto", 10F);
             this.checkBoxIsExcused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.checkBoxIsExcused.Location = new System.Drawing.Point(119, 260);
             this.checkBoxIsExcused.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsExcused.Name = "checkBoxIsExcused";
-            this.checkBoxIsExcused.Size = new System.Drawing.Size(91, 21);
+            this.checkBoxIsExcused.Size = new System.Drawing.Size(110, 24);
             this.checkBoxIsExcused.TabIndex = 17;
             this.checkBoxIsExcused.Text = "Is Excused";
             this.checkBoxIsExcused.UseVisualStyleBackColor = true;
@@ -165,12 +165,12 @@ namespace School.Forms.DataForms.AddForms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.label1.Location = new System.Drawing.Point(302, 40);
+            this.label1.Location = new System.Drawing.Point(273, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 24);
+            this.label1.Size = new System.Drawing.Size(155, 29);
             this.label1.TabIndex = 18;
             this.label1.Text = "Add Absence";
             // 
@@ -199,12 +199,12 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Font = new System.Drawing.Font("Roboto", 10F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
             this.label7.Location = new System.Drawing.Point(120, 316);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 17);
+            this.label7.Size = new System.Drawing.Size(98, 20);
             this.label7.TabIndex = 20;
             this.label7.Text = "Description";
             // 

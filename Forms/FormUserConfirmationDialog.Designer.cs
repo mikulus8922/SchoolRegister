@@ -113,7 +113,7 @@ namespace School.Forms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
-            this.ClientSize = new System.Drawing.Size(412, 297);
+            this.ClientSize = new System.Drawing.Size(410, 290);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.YesButton);
             this.Controls.Add(this.NoButton);

@@ -87,6 +87,12 @@
     <Compile Include="Forms\DataForms\FormGrades.Designer.cs">
       <DependentUpon>FormGrades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormErrorDialog.Designer.cs">
+      <DependentUpon>FormErrorDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormUserConfirmationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DataForms\FormGrades.resx">
       <DependentUpon>FormGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormErrorDialog.resx">
+      <DependentUpon>FormErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
