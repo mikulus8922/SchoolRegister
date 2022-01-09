@@ -34,7 +34,7 @@ namespace School.Forms.DataForms.AddForms
             lessons = lessonsLogic.ValidateGetTeacherLessons(UserData.teacherID);
             for (int i = 0; i < lessons.Rows.Count; i++)
             {
-                comboBoxLessons.Items.Add(lessons.Rows[i].Field<string>("Name") + " " + lessons.Rows[i].Field<DateTime>("Date"));
+                comboBoxLessons.Items.Add(lessons.Rows[i].Field<string>("Class") + " " + lessons.Rows[i].Field<DateTime>("Date"));
             }
         }
 

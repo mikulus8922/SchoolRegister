@@ -43,7 +43,7 @@ namespace School.Repositories
 
         public bool EditAbsence(int absenceID, bool isExcused, string description)
         {
-            string query = $@"UPDATE Absences SET Excused='{isExcused}, Description='{description}''
+            string query = $@"UPDATE Absences SET Excused='{isExcused}', Description='{description}'
                             WHERE ID='{absenceID}'; ";
 
 

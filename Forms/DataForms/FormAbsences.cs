@@ -79,7 +79,7 @@ namespace School.Forms.DataForms
             selectedIndex = dataGridView.CurrentCell.RowIndex;
             DataGridViewRow row = dataGridView.Rows[selectedIndex];
             checkBoxIsExcused.Checked = bool.Parse(row.Cells[5].Value.ToString());
-            textBoxDescription.Text = row.Cells[7].Value.ToString();
+            textBoxDescription.Text = row.Cells[6].Value.ToString();
 
             ModifyButton.Enabled = true;
             DeleteButton.Enabled = true;
