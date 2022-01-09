@@ -47,7 +47,7 @@ namespace School.Forms
             this.XButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XButton.ForeColor = System.Drawing.Color.White;
             this.XButton.ForegroundColor = System.Drawing.Color.White;
-            this.XButton.Location = new System.Drawing.Point(358, 13);
+            this.XButton.Location = new System.Drawing.Point(364, 7);
             this.XButton.Margin = new System.Windows.Forms.Padding(4);
             this.XButton.Name = "XButton";
             this.XButton.Size = new System.Drawing.Size(41, 29);
@@ -65,10 +65,10 @@ namespace School.Forms
             this.YesButton.BorderSize = 0;
             this.YesButton.FlatAppearance.BorderSize = 0;
             this.YesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YesButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YesButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.YesButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
-            this.YesButton.Location = new System.Drawing.Point(50, 220);
+            this.YesButton.Location = new System.Drawing.Point(42, 220);
             this.YesButton.Margin = new System.Windows.Forms.Padding(4);
             this.YesButton.Name = "YesButton";
             this.YesButton.Size = new System.Drawing.Size(169, 43);
@@ -86,10 +86,10 @@ namespace School.Forms
             this.NoButton.BorderSize = 0;
             this.NoButton.FlatAppearance.BorderSize = 0;
             this.NoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NoButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoButton.ForeColor = System.Drawing.Color.White;
             this.NoButton.ForegroundColor = System.Drawing.Color.White;
-            this.NoButton.Location = new System.Drawing.Point(227, 220);
+            this.NoButton.Location = new System.Drawing.Point(225, 220);
             this.NoButton.Margin = new System.Windows.Forms.Padding(4);
             this.NoButton.Name = "NoButton";
             this.NoButton.Size = new System.Drawing.Size(153, 43);
@@ -103,7 +103,7 @@ namespace School.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.label1.Location = new System.Drawing.Point(45, 116);
+            this.label1.Location = new System.Drawing.Point(37, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(341, 29);
             this.label1.TabIndex = 21;

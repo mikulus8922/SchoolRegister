@@ -218,6 +218,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Font\Roboto-Black.ttf" />
+    <None Include="Font\Roboto-BlackItalic.ttf" />
+    <None Include="Font\Roboto-Bold.ttf" />
+    <None Include="Font\Roboto-BoldCondensed.ttf" />
+    <None Include="Font\Roboto-BoldCondensedItalic.ttf" />
+    <None Include="Font\Roboto-BoldItalic.ttf" />
+    <None Include="Font\Roboto-Condensed.ttf" />
+    <None Include="Font\Roboto-CondensedItalic.ttf" />
+    <None Include="Font\Roboto-Italic.ttf" />
+    <None Include="Font\Roboto-Light.ttf" />
+    <None Include="Font\Roboto-LightItalic.ttf" />
+    <None Include="Font\Roboto-Medium.ttf" />
+    <None Include="Font\Roboto-MediumItalic.ttf" />
+    <None Include="Font\Roboto-Regular.ttf" />
+    <None Include="Font\Roboto-Thin.ttf" />
+    <None Include="Font\Roboto-ThinItalic.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

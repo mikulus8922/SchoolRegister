@@ -43,17 +43,19 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.comboBoxLessons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.comboBoxLessons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxLessons.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLessons.FormattingEnabled = true;
             this.comboBoxLessons.Location = new System.Drawing.Point(119, 163);
             this.comboBoxLessons.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxLessons.Name = "comboBoxLessons";
-            this.comboBoxLessons.Size = new System.Drawing.Size(507, 24);
+            this.comboBoxLessons.Size = new System.Drawing.Size(507, 28);
             this.comboBoxLessons.TabIndex = 0;
             // 
             // textBoxDescription
             // 
             this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDescription.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
             this.textBoxDescription.Location = new System.Drawing.Point(119, 241);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
@@ -131,7 +133,7 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.BorderSize = 0;
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.ForegroundColor = System.Drawing.Color.White;
             this.AddButton.Location = new System.Drawing.Point(239, 443);
@@ -139,7 +141,7 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(120, 43);
             this.AddButton.TabIndex = 22;
-            this.AddButton.Text = "Add Grade";
+            this.AddButton.Text = "Add Test";
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -152,7 +154,7 @@ namespace School.Forms.DataForms.AddForms
             this.QuitButton.BorderSize = 0;
             this.QuitButton.FlatAppearance.BorderSize = 0;
             this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuitButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.Location = new System.Drawing.Point(373, 443);

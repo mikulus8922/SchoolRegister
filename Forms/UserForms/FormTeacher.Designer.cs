@@ -48,15 +48,17 @@ namespace School.Forms.UserForms
             // 
             // labelHello
             // 
+            this.labelHello.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHello.AutoSize = true;
             this.labelHello.BackColor = System.Drawing.Color.Transparent;
             this.labelHello.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHello.ForeColor = System.Drawing.Color.White;
-            this.labelHello.Location = new System.Drawing.Point(88, 204);
+            this.labelHello.Location = new System.Drawing.Point(105, 204);
             this.labelHello.Name = "labelHello";
             this.labelHello.Size = new System.Drawing.Size(83, 24);
             this.labelHello.TabIndex = 0;
             this.labelHello.Text = "{name} !";
+            this.labelHello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -70,27 +72,28 @@ namespace School.Forms.UserForms
             this.panel1.Controls.Add(this.GradesButton);
             this.panel1.Controls.Add(this.AbsencesButton);
             this.panel1.Controls.Add(this.labelHello);
-            this.panel1.Location = new System.Drawing.Point(49, 53);
+            this.panel1.Location = new System.Drawing.Point(23, 53);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 651);
+            this.panel1.Size = new System.Drawing.Size(307, 651);
             this.panel1.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(92, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 126);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.label1.Location = new System.Drawing.Point(88, 160);
+            this.label1.Location = new System.Drawing.Point(111, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 33);
             this.label1.TabIndex = 13;
@@ -99,6 +102,7 @@ namespace School.Forms.UserForms
             // 
             // QuitButton
             // 
+            this.QuitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.QuitButton.BackColor = System.Drawing.Color.Transparent;
             this.QuitButton.BackgroundColor = System.Drawing.Color.Transparent;
             this.QuitButton.BorderColor = System.Drawing.Color.Transparent;
@@ -111,7 +115,7 @@ namespace School.Forms.UserForms
             this.QuitButton.ForegroundColor = System.Drawing.Color.White;
             this.QuitButton.Location = new System.Drawing.Point(26, 600);
             this.QuitButton.Name = "QuitButton";
-            this.QuitButton.Size = new System.Drawing.Size(210, 35);
+            this.QuitButton.Size = new System.Drawing.Size(259, 35);
             this.QuitButton.TabIndex = 12;
             this.QuitButton.Text = "Quit";
             this.QuitButton.UseVisualStyleBackColor = false;
@@ -119,6 +123,7 @@ namespace School.Forms.UserForms
             // 
             // LogOutButton
             // 
+            this.LogOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LogOutButton.BackColor = System.Drawing.Color.White;
             this.LogOutButton.BackgroundColor = System.Drawing.Color.White;
             this.LogOutButton.BorderColor = System.Drawing.Color.White;
@@ -131,7 +136,7 @@ namespace School.Forms.UserForms
             this.LogOutButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(6)))), ((int)(((byte)(43)))));
             this.LogOutButton.Location = new System.Drawing.Point(26, 559);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(210, 35);
+            this.LogOutButton.Size = new System.Drawing.Size(259, 35);
             this.LogOutButton.TabIndex = 11;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.UseVisualStyleBackColor = false;
@@ -139,6 +144,7 @@ namespace School.Forms.UserForms
             // 
             // LessonsButton
             // 
+            this.LessonsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LessonsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.LessonsButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.LessonsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
@@ -149,9 +155,9 @@ namespace School.Forms.UserForms
             this.LessonsButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.LessonsButton.ForeColor = System.Drawing.Color.White;
             this.LessonsButton.ForegroundColor = System.Drawing.Color.White;
-            this.LessonsButton.Location = new System.Drawing.Point(26, 432);
+            this.LessonsButton.Location = new System.Drawing.Point(25, 432);
             this.LessonsButton.Name = "LessonsButton";
-            this.LessonsButton.Size = new System.Drawing.Size(210, 35);
+            this.LessonsButton.Size = new System.Drawing.Size(259, 35);
             this.LessonsButton.TabIndex = 10;
             this.LessonsButton.Text = "Lessons";
             this.LessonsButton.UseVisualStyleBackColor = false;
@@ -159,6 +165,7 @@ namespace School.Forms.UserForms
             // 
             // TestsButton
             // 
+            this.TestsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.TestsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.TestsButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.TestsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
@@ -169,9 +176,9 @@ namespace School.Forms.UserForms
             this.TestsButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.TestsButton.ForeColor = System.Drawing.Color.White;
             this.TestsButton.ForegroundColor = System.Drawing.Color.White;
-            this.TestsButton.Location = new System.Drawing.Point(26, 378);
+            this.TestsButton.Location = new System.Drawing.Point(25, 378);
             this.TestsButton.Name = "TestsButton";
-            this.TestsButton.Size = new System.Drawing.Size(210, 35);
+            this.TestsButton.Size = new System.Drawing.Size(259, 35);
             this.TestsButton.TabIndex = 9;
             this.TestsButton.Text = "Tests";
             this.TestsButton.UseVisualStyleBackColor = false;
@@ -179,6 +186,7 @@ namespace School.Forms.UserForms
             // 
             // GradesButton
             // 
+            this.GradesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.GradesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.GradesButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.GradesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
@@ -189,9 +197,9 @@ namespace School.Forms.UserForms
             this.GradesButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.GradesButton.ForeColor = System.Drawing.Color.White;
             this.GradesButton.ForegroundColor = System.Drawing.Color.White;
-            this.GradesButton.Location = new System.Drawing.Point(26, 327);
+            this.GradesButton.Location = new System.Drawing.Point(25, 327);
             this.GradesButton.Name = "GradesButton";
-            this.GradesButton.Size = new System.Drawing.Size(210, 35);
+            this.GradesButton.Size = new System.Drawing.Size(259, 35);
             this.GradesButton.TabIndex = 8;
             this.GradesButton.Text = "Grades";
             this.GradesButton.UseVisualStyleBackColor = false;
@@ -199,6 +207,7 @@ namespace School.Forms.UserForms
             // 
             // AbsencesButton
             // 
+            this.AbsencesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.AbsencesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.AbsencesButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.AbsencesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
@@ -209,9 +218,9 @@ namespace School.Forms.UserForms
             this.AbsencesButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold);
             this.AbsencesButton.ForeColor = System.Drawing.Color.White;
             this.AbsencesButton.ForegroundColor = System.Drawing.Color.White;
-            this.AbsencesButton.Location = new System.Drawing.Point(26, 276);
+            this.AbsencesButton.Location = new System.Drawing.Point(25, 276);
             this.AbsencesButton.Name = "AbsencesButton";
-            this.AbsencesButton.Size = new System.Drawing.Size(210, 35);
+            this.AbsencesButton.Size = new System.Drawing.Size(259, 35);
             this.AbsencesButton.TabIndex = 7;
             this.AbsencesButton.Text = "Absences";
             this.AbsencesButton.UseVisualStyleBackColor = false;

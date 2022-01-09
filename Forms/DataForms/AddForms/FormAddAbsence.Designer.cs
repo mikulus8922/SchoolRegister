@@ -73,7 +73,7 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(253)))), ((int)(((byte)(255)))));
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.textBoxDescription.Font = new System.Drawing.Font("Roboto", 10F);
             this.textBoxDescription.Location = new System.Drawing.Point(119, 341);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDescription.Multiline = true;
@@ -114,15 +114,15 @@ namespace School.Forms.DataForms.AddForms
             this.AddButton.BorderSize = 0;
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.White;
             this.AddButton.ForegroundColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(239, 443);
+            this.AddButton.Location = new System.Drawing.Point(231, 443);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(120, 43);
+            this.AddButton.Size = new System.Drawing.Size(128, 43);
             this.AddButton.TabIndex = 16;
-            this.AddButton.Text = "Add Grade";
+            this.AddButton.Text = "Add Absence";
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -135,7 +135,7 @@ namespace School.Forms.DataForms.AddForms
             this.QuitButton.BorderSize = 0;
             this.QuitButton.FlatAppearance.BorderSize = 0;
             this.QuitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitButton.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.QuitButton.Location = new System.Drawing.Point(373, 443);
@@ -151,12 +151,12 @@ namespace School.Forms.DataForms.AddForms
             // 
             this.checkBoxIsExcused.AutoSize = true;
             this.checkBoxIsExcused.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxIsExcused.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsExcused.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIsExcused.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.checkBoxIsExcused.Location = new System.Drawing.Point(119, 260);
             this.checkBoxIsExcused.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsExcused.Name = "checkBoxIsExcused";
-            this.checkBoxIsExcused.Size = new System.Drawing.Size(109, 24);
+            this.checkBoxIsExcused.Size = new System.Drawing.Size(110, 24);
             this.checkBoxIsExcused.TabIndex = 17;
             this.checkBoxIsExcused.Text = "Is Excused";
             this.checkBoxIsExcused.UseVisualStyleBackColor = true;
