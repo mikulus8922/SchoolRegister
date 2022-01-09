@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="School.Repositories.TestsRepository">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAABABIAAAAAAAAAAIAAAAAAAAAAIAA=</HashCode>
+      <FileName>Repositories\TestsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.TeachersRepository">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAgAAAAEAgAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\TeachersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.SystemUsersRepository">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAAAAAAgA=</HashCode>
+      <FileName>Repositories\SystemUsersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.StudentsRepository">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAJAQAAAAAI=</HashCode>
+      <FileName>Repositories\StudentsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.Repository" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\Repository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Repositories.ParentsRepository" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Repositories\ParentsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.LessonsRepository">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAAAAAAAAAAAAAAAAABIAAAABAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\LessonsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.GradesRepository">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAEAAAIAAAAAAAAABAAEAAAAgIAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Repositories\GradesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.ClassesRepository" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAABAAAAAAAAABAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ClassesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Repositories.AbsencesRepository">
+    <Position X="16.25" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAACAAAAAAAAAAAQAAAAAIAACEAQAAAA=</HashCode>
+      <FileName>Repositories\AbsencesRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="School.Logics.TestsLogic" Collapsed="true">
+    <Position X="21" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAAAAAAAAAAAAAAAACgAAASAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Logics\TestsLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.TeachersLogic">
+    <Position X="28" Y="5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAUAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logics\TeachersLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.SystemUsersLogic" Collapsed="true">
+    <Position X="26.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAQAE=</HashCode>
+      <FileName>Logics\SystemUsersLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.StudentsLogic" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAAAAAAAACYAAAAAAAAAAAAAAAABAAAEAAAAA=</HashCode>
+      <FileName>Logics\StudentsLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.ParentsLogic">
+    <Position X="25.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAgAAAAAAQAAAAAAAAAAAAAAAAACgAA=</HashCode>
+      <FileName>Logics\ParentsLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.LessonsLogic">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIggAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Logics\LessonsLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.GradesLogic">
+    <Position X="32.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAIAAIAAAAACAAAAAAAACCEAAQIAAAAQAA=</HashCode>
+      <FileName>Logics\GradesLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.ClassesLogic" Collapsed="true">
+    <Position X="22.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAAAAAAAAAAAAAAAAAAIAACAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Logics\ClassesLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Logics.AbsencesLogic" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgAAAAAAIAAAAAAAAACAAIAFAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Logics\AbsencesLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.FormLogin">
+    <Position X="34.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wKAAAQQAACAAAFBAQADAAQACAIAAAAACEAAAAABBAQA=</HashCode>
+      <FileName>Forms\FormLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.UserForms.FormTeacher" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4gAEAQAAACJEABCAAACAAQACAIAAAhBAAAABAQBACIA=</HashCode>
+      <FileName>Forms\UserForms\FormTeacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.UserForms.FormStudent" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\UserForms\FormStudent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.UserForms.FormParent" Collapsed="true">
+    <Position X="21" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\UserForms\FormParent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.UserForms.FormAdmin" Collapsed="true">
+    <Position X="22.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\UserForms\FormAdmin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.FormTests" Collapsed="true">
+    <Position X="26.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgBEAAiAAIFEAAACgAAAGAAEgoDABAAAEAIAAAAA=</HashCode>
+      <FileName>Forms\DataForms\FormTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.FormLessons" Collapsed="true">
+    <Position X="26.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAIFAAAACAAAAKAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\DataForms\FormLessons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.FormGrades" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAAiBCAFEBEADgAIAGAAEggCABQQAEAIACAAA=</HashCode>
+      <FileName>Forms\DataForms\FormGrades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.FormAbsences" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAABIAAAiAAAFMBEACgAIAGAAEggCABAAAEAIAAAAA=</HashCode>
+      <FileName>Forms\DataForms\FormAbsences.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.AddForms.FormAddTest" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAgQEAACAAABEAAACAAAACABAApDAAIAAAAIAACAA=</HashCode>
+      <FileName>Forms\DataForms\AddForms\FormAddTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.AddForms.FormAddGrade" Collapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAJAgQEIACBCABEAACDAAIACAAAABDAAAAAAAIACCQI=</HashCode>
+      <FileName>Forms\DataForms\AddForms\FormAddGrade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Forms.DataForms.AddForms.FormAddAbsence" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wIJAgYEIACAAABEAACDAAAACAAAABDAAAAAAAIACCQI=</HashCode>
+      <FileName>Forms\DataForms\AddForms\FormAddAbsence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="School.Data.UserData">
+    <Position X="23.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAEAAAAAAAICAAAgAAAAAgAAAgAAAAAAAAACAA=</HashCode>
+      <FileName>Data\UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

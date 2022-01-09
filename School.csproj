@@ -218,6 +218,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Font\Roboto-Black.ttf" />
     <None Include="Font\Roboto-BlackItalic.ttf" />
     <None Include="Font\Roboto-Bold.ttf" />
