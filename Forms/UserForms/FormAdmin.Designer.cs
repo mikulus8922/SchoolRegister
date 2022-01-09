@@ -29,10 +29,16 @@ namespace School.Forms.UserForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.SuspendLayout();
+            // 
+            // FormAdmin
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FormAdmin";
             this.Text = "FormAdmin";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -52,7 +52,7 @@ namespace School.Forms.UserForms
             this.labelHello.BackColor = System.Drawing.Color.Transparent;
             this.labelHello.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHello.ForeColor = System.Drawing.Color.White;
-            this.labelHello.Location = new System.Drawing.Point(85, 204);
+            this.labelHello.Location = new System.Drawing.Point(88, 204);
             this.labelHello.Name = "labelHello";
             this.labelHello.Size = new System.Drawing.Size(83, 24);
             this.labelHello.TabIndex = 0;

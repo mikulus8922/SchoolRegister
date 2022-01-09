@@ -26,22 +26,9 @@ namespace School.Forms.DataForms.AddForms
         int studentID;
         int classID;
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
-        private static extern IntPtr CreateRoundRectRgn(
-           int nLeftRect,
-           int nTopRect,
-           int nRightRect,
-           int nBottomRect,
-           int nWidthEllipse,
-           int nHeightEllipse
-           );
-
-
         public FormAddGrade()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void FormAddGrade_Load(object sender, EventArgs e)

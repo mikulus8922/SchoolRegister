@@ -66,12 +66,12 @@ namespace School.Forms
             this.YesButton.FlatAppearance.BorderSize = 0;
             this.YesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.YesButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
-            this.YesButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
-            this.YesButton.Location = new System.Drawing.Point(69, 220);
+            this.YesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
+            this.YesButton.ForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
+            this.YesButton.Location = new System.Drawing.Point(50, 220);
             this.YesButton.Margin = new System.Windows.Forms.Padding(4);
             this.YesButton.Name = "YesButton";
-            this.YesButton.Size = new System.Drawing.Size(150, 43);
+            this.YesButton.Size = new System.Drawing.Size(169, 43);
             this.YesButton.TabIndex = 20;
             this.YesButton.Text = "Yes, I want to quit";
             this.YesButton.UseVisualStyleBackColor = false;
@@ -89,10 +89,10 @@ namespace School.Forms
             this.NoButton.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoButton.ForeColor = System.Drawing.Color.White;
             this.NoButton.ForegroundColor = System.Drawing.Color.White;
-            this.NoButton.Location = new System.Drawing.Point(233, 220);
+            this.NoButton.Location = new System.Drawing.Point(227, 220);
             this.NoButton.Margin = new System.Windows.Forms.Padding(4);
             this.NoButton.Name = "NoButton";
-            this.NoButton.Size = new System.Drawing.Size(120, 43);
+            this.NoButton.Size = new System.Drawing.Size(153, 43);
             this.NoButton.TabIndex = 19;
             this.NoButton.Text = "No, I don\'t";
             this.NoButton.UseVisualStyleBackColor = false;
@@ -111,9 +111,8 @@ namespace School.Forms
             // 
             // FormUserConfirmationDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(40)))));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(146)))));
             this.ClientSize = new System.Drawing.Size(412, 297);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.YesButton);
