@@ -44,7 +44,7 @@ namespace School.Repositories
 
         public DataTable GetClassTests(int classID)
         {
-            string query = $@"SELECT Classes.Name, Lessons.Name, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
+            string query = $@"SELECT Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
 							INNER JOIN Lessons ON Lessons.ID = Tests.LessonID
                             INNER JOIN Classes ON Classes.ID = Lessons.ClassID
                             WHERE Lessons.ClassID = '{classID}';";
@@ -62,7 +62,7 @@ namespace School.Repositories
 
         public DataTable GetLessonTests(int lessonID)
         {
-            string query = $@"SELECT Classes.Name, Lessons.Name, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
+            string query = $@"SELECT Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
 							INNER JOIN Lessons ON Lessons.ID = Tests.LessonID
                             INNER JOIN Classes ON Classes.ID = Lessons.ClassID
                             WHERE Lessons.ID = '{lessonID}';";
@@ -80,7 +80,7 @@ namespace School.Repositories
 
         public DataTable GetTeacherTests(int teacherID)
         {
-            string query = $@"SELECT Classes.Name, Lessons.Name, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
+            string query = $@"SELECT Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Tests.Description, Lessons.ClassID as ClassID, Lessons.ID as LessonID, Tests.ID as TestID FROM Tests
 							INNER JOIN Lessons ON Lessons.ID = Tests.LessonID
                             INNER JOIN Classes ON Classes.ID = Lessons.ClassID
                             WHERE Lessons.TeacherID = '{teacherID}';";

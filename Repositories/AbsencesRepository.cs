@@ -59,7 +59,7 @@ namespace School.Repositories
 
         public DataTable GetAbsences()
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name, Lessons.Name, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
 							INNER JOIN Students ON Students.ID = Absences.StudentID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
                             INNER JOIN Classes ON Classes.ID = Students.ClassID
@@ -78,7 +78,7 @@ namespace School.Repositories
 
         public DataTable GetStudentAbsences(int studentID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name, Lessons.Name, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
 							INNER JOIN Students ON Students.ID = Absences.StudentID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
                             INNER JOIN Classes ON Classes.ID = Students.ClassID
@@ -98,7 +98,7 @@ namespace School.Repositories
 
         public DataTable GetTeacherAbsences(int teacherID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name, Lessons.Name, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
 							INNER JOIN Students ON Students.ID = Absences.StudentID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
                             INNER JOIN Classes ON Classes.ID = Students.ClassID
@@ -118,7 +118,7 @@ namespace School.Repositories
 
         public DataTable GetTeacherClassAbsences(int teacherID, int classID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name, Lessons.Name, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Classes.Name AS Class, Lessons.Name AS Lesson, Lessons.Date, Absences.Excused, Absences.Description, Absences.StudentID AS StudentID, Absences.LessonID AS LessonID, Absences.ID AS AbsenceID FROM Absences
 							INNER JOIN Students ON Students.ID = Absences.StudentID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
                             INNER JOIN Classes ON Classes.ID = Students.ClassID

@@ -75,7 +75,7 @@ namespace School.Repositories
 
         public DataTable GetClassGrades(int classID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
@@ -94,7 +94,7 @@ namespace School.Repositories
 
         public DataTable GetClassTeacherGrades(int classID, int teacherID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
@@ -115,7 +115,7 @@ namespace School.Repositories
 
         public DataTable GetGrades()
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID ";
@@ -133,7 +133,7 @@ namespace School.Repositories
 
         public DataTable GetStudentGrades(int studentID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
@@ -152,7 +152,7 @@ namespace School.Repositories
 
         public DataTable GetStudentTeacherGrades(int studentID, int teacherID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
@@ -172,7 +172,7 @@ namespace School.Repositories
 
         public DataTable GetTeacherGrades(int teacherID)
         {
-            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
+            string query = $@"SELECT SystemUsers.FirstName, SystemUsers.LastName, Grades.Grade, Grades.Weight, Grades.Type, Lessons.Name AS Lesson, Lessons.Date, Grades.Description, Grades.ID as GradeID, Lessons.ID as LessonID, Students.ID as StudentID FROM Grades
                             INNER JOIN Students ON Grades.StudentID = Students.ID
                             INNER JOIN Lessons ON Lessons.ID = Grades.LessonID
                             INNER JOIN SystemUsers ON SystemUsers.ID = Students.SystemUserID
