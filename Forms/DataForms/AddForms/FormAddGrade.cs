@@ -72,7 +72,11 @@ namespace School.Forms.DataForms.AddForms
             string type = textBoxType.Text;
             string description = textBoxDescription.Text;
 
-            gradesLogic.ValidateAddGrade(studentID, lessonID, grade, weight, type, description);
+            if (!gradesLogic.ValidateAddGrade(studentID, lessonID, grade, weight, type, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
             textBoxGrade.Text = "";
             textBoxWeight.Text = "";

@@ -100,9 +100,12 @@ namespace School.Forms.DataForms
             string description = textBoxDescription.Text;
 
 
-            bool message = gradesLogic.ValidateEditGrade(gradeID, grade, weight, type, description);
+            if (!gradesLogic.ValidateEditGrade(gradeID, grade, weight, type, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
             DataTable gradesData = grades.Copy();
@@ -121,9 +124,13 @@ namespace School.Forms.DataForms
         {
             int gradeID = grades.Rows[selectedIndex].Field<int>("GradeID");
 
-            bool message = gradesLogic.ValidateRemoveGrade(gradeID);
+            if (!gradesLogic.ValidateRemoveGrade(gradeID))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
+
 
             grades = gradesLogic.ValidateGetTeacherGrades(UserData.teacherID);
             DataTable gradesData = grades.Copy();

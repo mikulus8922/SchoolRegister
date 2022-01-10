@@ -69,7 +69,12 @@ namespace School.Forms.DataForms.AddForms
             bool isExcused = checkBoxIsExcused.Checked;
             string description = textBoxDescription.Text;
 
-            absencesLogic.ValidateAddAbsence(studentID, lessonID, isExcused, description);
+            if (!absencesLogic.ValidateAddAbsence(studentID, lessonID, isExcused, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
+                
 
             checkBoxIsExcused.Checked = false;
             textBoxDescription.Text = "";

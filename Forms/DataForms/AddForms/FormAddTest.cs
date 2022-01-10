@@ -54,7 +54,11 @@ namespace School.Forms.DataForms.AddForms
         {
             string description = textBoxDescription.Text;
 
-            testsLogic.ValidateAddTest(lessonID, description);
+            if( !testsLogic.ValidateAddTest(lessonID, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
             textBoxDescription.Text = "";
         }

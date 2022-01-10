@@ -75,11 +75,15 @@ namespace School.Forms
             string password = textBox2.Text;
             string passowrdHash = GetHash(SHA256.Create(), password);
 
+            textBox1.Text = "";
+            textBox2.Text = "";
+
             user = systemUsersLogic.ValidateGetUser(login, passowrdHash);
 
             if (user.Rows.Count == 0)
             {
-                //wypisz blad
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
             }
             else
             {
@@ -106,7 +110,8 @@ namespace School.Forms
                         Data.UserData.teacherID = teacher.Rows[0].Field<int>("ID");
                         this.Hide();
                         FormTeacher formTeacher = new FormTeacher();
-                        formTeacher.FormClosed += (s, args) => this.Close();
+                        formTeacher.formLogin = this;
+                        //formTeacher.FormClosed += (s, args) => this.Close();
                         formTeacher.Show();
                         return;
                     }

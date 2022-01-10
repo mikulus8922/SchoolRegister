@@ -18,6 +18,7 @@ namespace School.Forms.UserForms
     {
         SystemUsersLogic systemUsersLogic = new SystemUsersLogic();
 
+        public FormLogin formLogin = null;
 
         public FormTeacher()
         {
@@ -31,7 +32,7 @@ namespace School.Forms.UserForms
             string name = users.Rows[0].Field<string>("FirstName");
 
 
-            labelHello.Text = $"{name} !";
+            labelHello.Text = $"{name}!";
         }
 
         private void AbsencesButton_Click(object sender, EventArgs e)
@@ -72,10 +73,12 @@ namespace School.Forms.UserForms
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            /*            UserData.reset();
-            FormLogin formLogin = new FormLogin();
+            UserData.reset();
+            /*            FormLogin formLogin = new FormLogin();
+                        formLogin.Show();*/
             formLogin.Show();
-            this.Close();*/
+
+            this.Close();
 
         }
 

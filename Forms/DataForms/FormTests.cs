@@ -107,9 +107,13 @@ namespace School.Forms.DataForms
             string description = textBoxDescription.Text;
 
 
-            bool message = testsLogic.ValidateEditTest(testID, description);
+            if (!testsLogic.ValidateEditTest(testID, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
+
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
             DataTable testsData = tests.Copy();
@@ -126,9 +130,13 @@ namespace School.Forms.DataForms
         {
             int testID = tests.Rows[selectedIndex].Field<int>("TestID");
 
-            bool message = testsLogic.ValidateRemoveTest(testID);
+            if (!testsLogic.ValidateRemoveTest(testID))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
+
 
             tests = testsLogic.ValidateGetTeacherTests(UserData.teacherID);
             DataTable testsData = tests.Copy();

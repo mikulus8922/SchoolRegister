@@ -100,9 +100,13 @@ namespace School.Forms.DataForms
             string description = textBoxDescription.Text;
 
 
-            bool message = absencesLogic.ValidateEditAbsence(absenceID, isExcused, description);
+            if (!absencesLogic.ValidateEditAbsence(absenceID, isExcused, description))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
+
 
             absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
             DataTable absencesData = absences.Copy();
@@ -119,9 +123,13 @@ namespace School.Forms.DataForms
         {
             int absenceID = absences.Rows[selectedIndex].Field<int>("AbsenceID");
 
-            bool message = absencesLogic.ValidateRemoveAbsence(absenceID);
+            if (!absencesLogic.ValidateRemoveAbsence(absenceID))
+            {
+                FormErrorDialog formErrorDialog = new FormErrorDialog();
+                formErrorDialog.Show();
+            }
 
-            Console.WriteLine(message);
+
 
             absences = absencesLogic.ValidateGetTeacherAbsences(UserData.teacherID);
             DataTable absencesData = absences.Copy();
