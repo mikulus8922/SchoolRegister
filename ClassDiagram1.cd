@@ -152,7 +152,7 @@
   <Class Name="School.Forms.UserForms.FormTeacher" Collapsed="true">
     <Position X="24.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>4gAEAQAAACJEABCAAACAAQACAIAAAhBAAAABAQBACIA=</HashCode>
+      <HashCode>4gAEAQAAACJEABCAAACAAQACAIAAAhBAABABAQBACIA=</HashCode>
       <FileName>Forms\UserForms\FormTeacher.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -198,10 +198,10 @@
       <FileName>Forms\DataForms\FormGrades.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="School.Forms.DataForms.FormAbsences" Collapsed="true">
-    <Position X="24.5" Y="0.5" Width="1.5" />
+  <Class Name="School.Forms.DataForms.FormAbsences">
+    <Position X="19.5" Y="8.75" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>AIAABIAAAiAAAFMBEACgAIAGAAEggCABAAAEAIAAAAA=</HashCode>
+      <HashCode>AIAABIAAAiAAAFMBEACgAAAGAAEggCABAAAEAIAAAAA=</HashCode>
       <FileName>Forms\DataForms\FormAbsences.cs</FileName>
     </TypeIdentifier>
   </Class>

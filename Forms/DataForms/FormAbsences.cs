@@ -22,7 +22,7 @@ namespace School.Forms.DataForms
         //DataTable lessons;
         DataTable absences;
 
-        GradesLogic gradesLogic = new GradesLogic();
+        //GradesLogic gradesLogic = new GradesLogic();
         ClassesLogic classesLogic = new ClassesLogic();
         //StudentsLogic studentsLogic = new StudentsLogic();
         //LessonsLogic lessonsLogic = new LessonsLogic();
