@@ -21,6 +21,8 @@ namespace School.Logics
         {
             if (name.Length > 2)
                 return false;
+            if (yearOfCreation > 2050 || yearOfCreation < 2000)
+                return false;
             if (description.Length > 50)
                 return false;
 
@@ -35,6 +37,8 @@ namespace School.Logics
         public bool ValidateEditClass(int classID, string name, string description, int yearOfCreation, int teacherID)
         {
             if (name.Length > 2)
+                return false;
+            if (yearOfCreation > 2050 || yearOfCreation < 2000)
                 return false;
             if (description.Length > 50)
                 return false;
